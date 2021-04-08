@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fredoka+One&family=Lobster+Two:ital,wght@1,700&family=Permanent+Marker&display=swap');
+
+.flexContainerLogin{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    height:88vh;
+    color:rgb(182, 182, 182);
+    font-size: 3em;
+}
+
+
+.formContainerLogin{
+    font-family: 'Fredoka One';
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.171);
+}
+
+
+
+
+.submitLogin{
+    font-family: 'Caveat';
+    width:23%;
+    padding: 0.3em;
+    -webkit-text-fill-color:rgb(255, 255, 255);
+    margin: 1rem auto 1.5em auto;
+    border-radius:5em;
+    outline:none;
+    border:none;
+    font-weight: 700;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(90deg,rgba(110, 110, 110, 0.4) 100%, rgb(55, 28, 63) 40%, rgba(0, 0, 0, 0.4) 100%);
+    cursor:pointer;
+    transform: translateZ(0);
+    transition: transform 0.1s ease-out;
+}
+
+.submitLogin:hover{
+    transform:scale(1.05)
+}
+
+input{
+    width:30%;
+    padding: 0.5em;
+    -webkit-text-fill-color:rgb(87, 36, 84);
+    margin-left:1rem;
+    border-radius:5em;
+    outline:none;
+    border:none;
+    margin: 0.5em 1rem;
+}
+
+input[type="file"] {
+
+    display: inline-block;
+    font-family: 'Fredoka One';
+
+}
+
+input:not([type="image" i]) {
+    box-sizing: border-box;
+
+}
+
+.subtitle{
+    font-family: 'Caveat';
+    text-transform: uppercase;
+    margin: 1.4rem auto 1rem auto;
+    color: rgb(197, 92, 43,0);
+    background: -webkit-linear-gradient(90deg, rgba(168, 168, 168, 0.6) 40%, rgba(206, 206, 206,0.4) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+}
+
+.inputField{
+    margin: 1rem auto 1rem 1rem;
+    width: 100%;
+}
+.formContainerSmall{
+    display: flex;
+    justify-content: center;
+}
+
+.subtitleContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.titleLogin{
+    font-family: 'Fredoka One';
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-bottom: 0.25em;
+    margin-top: 0.5em;
+    color: rgb(197, 92, 43,0);
+    background: -webkit-linear-gradient(90deg, rgb(172, 172, 172) 40%, rgb(206, 206, 206) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

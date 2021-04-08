@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fredoka+One&family=Lobster+Two:ital,wght@1,700&family=Permanent+Marker&display=swap');
+
+.navContainer{
+    width:100%;
+    height:9vh;
+    display: flex;
+    justify-content:space-between;
+    z-index: 2;
+
+}
+
+
+.logo{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    font-family: 'Fredoka One';
+    font-weight: 700;
+    font-size: 1.5em;
+    color: rgb(156, 0, 0);
+    height:100%;
+    margin: auto 0 auto 0;
+    transform: translateZ(0);
+    transition: transform 0.25s ease-out;
+    background: none;
+    padding: 0;
+}
+
+.home{
+    cursor: pointer;
+    text-decoration: none;
+    background: none;
+    margin-left: 4%;
+}
+
+.logo:hover{
+    transform: translateY(-5px);
+
+}
+
+.linkContainer{
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(197, 92, 43,0);
+    background: -webkit-linear-gradient(90deg, rgb(170, 68, 28) 40%, rgba(255,229,168,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right:6.5%;
+}
+
+.links{
+    height:100%;
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    font-family: 'Fredoka One';
+    font-weight: 700;
+    color: rgb(190, 190, 190);
+    background: -webkit-linear-gradient(90deg, rgb(145, 145, 145) 40%, rgba(255,229,168,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 1em 0 1em;
+    font-size: 1em;
+    transform: translateZ(0);
+    transition: transform 0.25s ease-out;
+}
+
+
+.links:hover{
+    color: rgb(197, 92, 43,0);
+    transform: translateY(-5px);
+
+}

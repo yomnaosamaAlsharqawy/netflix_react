@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fredoka+One&family=Lobster+Two:ital,wght@1,700&family=Permanent+Marker&display=swap');
+
+
+.flexContainerAddSong{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    height:88vh;
+    color:rgb(126, 63, 82);
+    font-size: 3em;
+}
+.formContainerAddSong{
+    font-family: 'Fredoka One';
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.171);
+}
+
+
+
+
+
+
+.submitSong{
+    font-family: 'Caveat';
+    width:30%;
+    padding: 0.3em;
+    -webkit-text-fill-color:rgb(255, 255, 255);
+    margin: 1rem auto 1.5em auto;
+    border-radius:5em;
+    outline:none;
+    border:none;
+    font-weight: 700;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(90deg,rgba(110, 110, 110, 0.4) 100%, rgb(109, 59, 76) 40%, rgba(0, 0, 0, 0.4) 100%);
+    cursor:pointer;
+    transform: translateZ(0);
+    transition: transform 0.1s ease-out;
+}
+
+.submitSong:hover{
+    transform:scale(1.05)
+}
+
+input{
+    width:30%;
+    padding: 0.5em;
+    -webkit-text-fill-color:rgb(139, 70, 99);
+    margin-left:1em;
+    border-radius:5em;
+    outline:none;
+    border:none;
+    margin: 0.5em 1em;
+}
+
+input[type="file"] {
+
+    display: inline-block;
+    font-family: 'Fredoka One';
+
+}
+
+input:not([type="image" i]) {
+    box-sizing: border-box;
+
+}
+
+.subtitleSong{
+    font-family: 'Caveat';
+    text-transform: uppercase;
+    margin: 1.1em 1em 1em 3em;
+    width: 80%;
+    color: rgb(197, 92, 43,0);
+    background: -webkit-linear-gradient(90deg, rgba(168, 168, 168, 0.6) 40%, rgba(206, 206, 206,0.4) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.inputFieldSong{
+    margin: 1em auto 1em 1em;
+    width: 70%;
+    
+    
+}
+.inputFieldFile{
+    margin: 0.6em auto 1em 1em;
+    width: 90%;
+    
+}
+.formContainerSmall{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.subtitleContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.titleAddSong{
+    font-family: 'Fredoka One';
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-bottom: 0.25em;
+    margin-top: 0.5em;
+    color: rgb(197, 92, 43,0);
+    background: -webkit-linear-gradient(90deg, rgb(172, 172, 172) 40%, rgb(206, 206, 206) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
