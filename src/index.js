@@ -5,7 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import LoginForm from './components/forms/LoginForm';
 import GetStartedForm from './components/forms/GetStartedForm';
 // Profiles
-import ProfileLoginForm from './components/forms/ProfileLoginForm';
+import ProfileLoginForm from './components/profiles/ProfileLoginForm';
+import ProfileList from './components/profiles/ProfileList';
 
 
 
@@ -18,7 +19,8 @@ ReactDOM.render(
     // <GetStartedForm />
 
     // Profiles
-    <ProfileLoginForm />
+    //<ProfileLoginForm />
+    <ProfileList />
 
 ,document.getElementById('root')
 );
