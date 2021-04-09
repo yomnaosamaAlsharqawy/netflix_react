@@ -2,10 +2,11 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // Accounts
-import LoginForm from './components/forms/LoginForm';
-import GetStartedForm from './components/forms/GetStartedForm';
+import GetStartedForm from './components/accounts/GetStartedForm';
+import LoginForm from './components/accounts/LoginForm';
+import RegistrationForm from './components/accounts/RegistrationForm'
 // Profiles
-import ProfileLoginForm from './components/forms/ProfileLoginForm';
+import ProfileLoginForm from './components/accounts/ProfileLoginForm';
 
 
 
@@ -14,11 +15,12 @@ ReactDOM.render(
     // <App />
 
     // Accounts
-    // <LoginForm />
     // <GetStartedForm />
+    // <LoginForm />
+    <RegistrationForm />
 
     // Profiles
-    <ProfileLoginForm />
+    // <ProfileLoginForm />
 
 ,document.getElementById('root')
 );

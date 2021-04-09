@@ -15,7 +15,7 @@ const accountApi = {
     accountDetails: async function(id) {
         const res = await fetch(APIURL+`${id}/`);
         const data = await res.json();
-        return data;
+        return data
     },
     login: async function (user){
         const requestOptions = {
@@ -28,6 +28,18 @@ const accountApi = {
         const res = await fetch(APIURL+"login/", requestOptions);
         const data = await res.json();
         return data;
-    }
+    },
+    register: async function (user){
+        const requestOptions = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(user)
+        };
+        const res = await fetch(APIURL+"register/step1/", requestOptions);
+        const data = await res.json();
+        return [data, res.status];
+    },
 }
 export default accountApi;
