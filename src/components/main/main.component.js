@@ -11,16 +11,16 @@ export default function Main() {
             </Link>
 
             <div className='linkContainer'>
-                <Link to='/register'>
-                    <div className='links'>Register</div>
+                <Link to='/movies'>
+                    <div className='links'>Movies</div>
                 </Link>
 
-                <Link to='/login'>
-                    <div className='links'>Login</div>
+                <Link to='/tvshows'>
+                    <div className='links'>TVShows</div>
                 </Link>
 
-                <Link to='/addsong'>
-                    <div className='links'>Add Song</div>
+                <Link to='/mylist'>
+                    <div className='links'>My List</div>
                 </Link>
             </div>
         </div>

@@ -5,7 +5,7 @@ import {Card} from '../card/card.component';
 import './card-list.styles.css';
 
 
-export const CardList = ({movieList}) => {
+export const CardList = ({movieList, currentmovie}) => {
     return (
         <div className='card-list'>
                 {movieList.map(movie => (

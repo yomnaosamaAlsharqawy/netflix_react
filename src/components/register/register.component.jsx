@@ -17,10 +17,10 @@ const {register, handleSubmit } = useForm();
     formData1.append('password', data.password)
     formData1.append('password2', data.password2)
     // console.log(formData1)
-    console.log('user:' + data.username)
-    console.log('password:' + data.password)
-    console.log('password2:' + data.password2)
-    console.log('email:' + data.email)
+    // console.log('user:' + data.username)
+    // console.log('password:' + data.password)
+    // console.log('password2:' + data.password2)
+    // console.log('email:' + data.email)
 
 
     let httpResponse =  await fetch("http://localhost:8000/api/songs/sign_up/",{

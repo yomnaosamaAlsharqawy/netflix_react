@@ -6,6 +6,7 @@ export const Card = ({movie}) => {
 const [hovered, sethovered] = useState(false)
 
 
+
 const handleHover = () => {
     sethovered(true)
 }
@@ -18,7 +19,8 @@ const handleExit = () => {
 
 
     return (
-            <div onMouseLeave={handleExit} onMouseEnter={handleHover} className="card-container">  
+            <div onMouseLeave={handleExit} onMouseEnter={handleHover} className="card-container">
+                  
                 <div className='imageContainer'>
                     <img className="cardimg"
                     alt="movie"
