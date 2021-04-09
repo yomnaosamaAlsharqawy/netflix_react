@@ -1,5 +1,5 @@
 const APIURL = "http://localhost:8000/api/accounts/"
-const accountsApi = {
+const accountApi = {
     login: async function (user){
         const requestOptions = {
             method: "POST",
@@ -13,4 +13,4 @@ const accountsApi = {
         return data;
     }
 }
-export default accountsApi;
+export default accountApi;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useInput } from "../../hooks/useInput";
-import accountsApi from "../../api/accounts";
+import accountApi from "../../api/account";
 import {Form, Button} from 'react-bootstrap';
 
 function LoginForm() {
@@ -10,7 +10,7 @@ function LoginForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = await accountsApi.login({
+    const data = await accountApi.login({
       username: emailProps.value,
       password: passwordProps.value,
     });
