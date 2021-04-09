@@ -12,16 +12,18 @@ import ProfileList from './components/profiles/ProfileList';
 
 
 ReactDOM.render(
-    // <App />
+    <App />
 
     // Accounts
     // <GetStartedForm />
     // <LoginForm />
-    <RegistrationForm />
+    // <RegistrationForm />
 
     // Profiles
-    //<ProfileLoginForm />
-    //<ProfileList />
+    // <ProfileLoginForm />
+    // <ProfileList />
+
+    // test
 
 ,document.getElementById('root')
 );
