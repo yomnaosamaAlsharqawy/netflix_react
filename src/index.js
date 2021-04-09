@@ -12,12 +12,12 @@ import ProfileList from './components/profiles/ProfileList';
 
 
 ReactDOM.render(
-    // <App />
+    <App />
 
     // Accounts
     // <GetStartedForm />
     // <LoginForm />
-    <RegistrationForm />
+    // <RegistrationForm />
 
     // Profiles
     //<ProfileLoginForm />
