@@ -20,8 +20,10 @@ ReactDOM.render(
     // <RegistrationForm />
 
     // Profiles
-    //<ProfileLoginForm />
-    //<ProfileList />
+    // <ProfileLoginForm />
+    // <ProfileList />
+
+    // test
 
 ,document.getElementById('root')
 );
