@@ -6,8 +6,8 @@ import GetStartedForm from './components/accounts/GetStartedForm';
 import LoginForm from './components/accounts/LoginForm';
 import RegistrationForm from './components/accounts/RegistrationForm'
 // Profiles
-import ProfileLoginForm from './components/accounts/ProfileLoginForm';
-
+import ProfileLoginForm from './components/profiles/ProfileLoginForm';
+import ProfileList from './components/profiles/ProfileList';
 
 
 
@@ -20,7 +20,8 @@ ReactDOM.render(
     <RegistrationForm />
 
     // Profiles
-    // <ProfileLoginForm />
+    //<ProfileLoginForm />
+    //<ProfileList />
 
 ,document.getElementById('root')
 );
