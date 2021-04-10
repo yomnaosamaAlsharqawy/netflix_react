@@ -1,45 +1,70 @@
-const APIURL = "http://localhost:8000/api/accounts/"
+const APIURL = "http://localhost:8000/api/accounts/";
 const accountApi = {
-    getStarted: async function(email){
-        const requestOptions = {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(email)
-        };
-        const res = await fetch(APIURL+"user-check/", requestOptions);
-        const data = await res.json();
-        return data;
-    },
-    accountDetails: async function(id) {
-        const res = await fetch(APIURL+`${id}/`);
-        const data = await res.json();
-        return data
-    },
-    login: async function (user){
-        const requestOptions = {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(user)
-        };
-        const res = await fetch(APIURL+"login/", requestOptions);
-        const data = await res.json();
-        return data;
-    },
-    register: async function (user){
-        const requestOptions = {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(user)
-        };
-        const res = await fetch(APIURL+"register/step1/", requestOptions);
-        const data = await res.json();
-        return [data, res.status];
-    },
-}
+  getStarted: async function (bodyObj) {
+    const requestOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(bodyObj),
+    };
+    const res = await fetch(APIURL + "user-check/", requestOptions);
+    const data = await res.json();
+    return data;
+  },
+  accountDetails: async function (id) {
+    const res = await fetch(APIURL + `${id}/`);
+    const data = await res.json();
+    return data;
+  },
+  login: async function (bodyObj) {
+    const requestOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(bodyObj),
+    };
+    const res = await fetch(APIURL + "login/", requestOptions);
+    const data = await res.json();
+    return data;
+  },
+  register: async function (bodyObj) {
+    const requestOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(bodyObj),
+    };
+    const res = await fetch(APIURL + "register/step1/", requestOptions);
+    const data = await res.json();
+    return [data, res.status];
+  },
+  registerPlan: async function(bodyObj) {
+    const requestOptions = {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(bodyObj),
+    };
+    const res = await fetch(APIURL + "register/step2/", requestOptions);
+    const data = await res.json();
+    return [data, res.status];
+  },
+  registerPhoneNumber: async function(bodyObj) {
+    const requestOptions = {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(bodyObj),
+    };
+    const res = await fetch(APIURL + "register/step3/", requestOptions);
+    const data = await res.json();
+    return [data, res.status];
+  }
+};
+
 export default accountApi;
