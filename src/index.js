@@ -8,6 +8,7 @@ import RegistrationForm from './components/accounts/RegistrationForm'
 // Profiles
 import ProfileLoginForm from './components/profiles/ProfileLoginForm';
 import ProfileList from './components/profiles/ProfileList';
+import CreateProfile from './components/profiles/CreateProfile';
 
 
 
@@ -22,8 +23,8 @@ ReactDOM.render(
     // Profiles
     // <ProfileLoginForm />
     // <ProfileList />
+    // <CreateProfile />
 
-    // test
 
 ,document.getElementById('root')
 );

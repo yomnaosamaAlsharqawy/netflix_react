@@ -1,5 +1,5 @@
 import { Card } from "./ProfileCard";
-// import "./card-list.styles.css";
+import "./card-list.styles.css";
 import profileApi from "../../api/profile";
 import { useEffect } from "react";
 import { useState } from "react";
