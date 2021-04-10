@@ -2,9 +2,8 @@ const PROFILE_ID = 1
 const ACCOUNT_ID = 2
 
 const BASE_URL = "http://localhost:8000/"
-const PROFILES_API_URL = `api/accounts/profiles/${PROFILE_ID}/`
+const PROFILES_BASE_URL = "api/accounts/profiles/"
 const GET_PROFILES_API_URL = `api/accounts/${ACCOUNT_ID}/profiles/`
-const GET_IMAGES_API_URL = `api/accounts/profiles/images/`
 
 const profileApi = {
 
@@ -16,7 +15,7 @@ const profileApi = {
             },
             body: JSON.stringify(profile)
         };
-        const res = await fetch(BASE_URL+PROFILES_API_URL+"login/", requestOptions);
+        const res = await fetch(BASE_URL+PROFILES_BASE_URL+`/${PROFILE_ID}/login/`, requestOptions);
         const data = await res.json();
         return data;
     },
@@ -38,7 +37,7 @@ const profileApi = {
     },
 
     getImages: async function (){
-        const URL = BASE_URL+GET_IMAGES_API_URL
+        const URL = BASE_URL+PROFILES_BASE_URL+"images/"
         
         const requestOptions = {
             method: "GET",
@@ -50,6 +49,22 @@ const profileApi = {
         const res = await fetch(URL, requestOptions);
         const data = await res.json();
         return data;
+    },
+
+    createProfile: async function (profile){
+        const URL = BASE_URL+PROFILES_BASE_URL+"new/"
+        
+        const requestOptions = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(profile)
+        };
+        
+        const res = await fetch(URL, requestOptions);
+        const data = await res.json();
+        return [data, res.status];
     },
 
 }

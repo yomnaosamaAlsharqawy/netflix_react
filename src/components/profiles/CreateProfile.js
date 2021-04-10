@@ -3,27 +3,35 @@ import { useInput } from "../../hooks/useInput";
 import {Form, Button} from 'react-bootstrap';
 import profileApi from "../../api/profile";
 
-function ProfileLoginForm() {
+const ACCOUNT_ID = 2
+
+function CreateProfile() {
     const [nameProps, resetName] = useInput("");
     const [nameError, setNameError] = useState(null);
-    const [pincodeProps, resetPincode] = useInput("");
   
     const handleSubmit = async (e) => {
       e.preventDefault();
 
       const profileData = {
         name: nameProps.value,
-        pin_code: pincodeProps.value,
+        account_id: ACCOUNT_ID,
+        pin_code: "",
+        image_id: 1
       };
 
-      const response = await profileApi.login(profileData);
+      const [response, status] = await profileApi.createProfile(profileData);
       
-      if (response.success) {
-        console.log(response.message)
-      } else {
-        console.log(response.message)
-        setNameError("Name/Pin Code us not correct!");
+      if(status == 400) {
+        setNameError("Profile name can't be empty")
+        console.log("profile name error")
       }
+      else if (status == 201) {
+          console.log("Created", response)  //Profile created -> route
+      }
+      else {
+          console.log("Unknown error", response, status)
+      }
+      
     };
 
     return (
@@ -32,20 +40,17 @@ function ProfileLoginForm() {
             <p className="text-danger small"> 
               {nameError}
             </p>}
+
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Profile Name</Form.Label>
             <Form.Control type="text" placeholder="Enter profile name"  {...nameProps} />
           </Form.Group>
-    
-          <Form.Group controlId="formBasicPassword">
-            <Form.Label>Pin Code</Form.Label>
-            <Form.Control type="password" placeholder="Enter your pin code" {...pincodeProps} />
-          </Form.Group>
+
           <Button variant="primary" type="submit" onClick={handleSubmit} >
-            Start Watching
+            Add Profile
           </Button>
         </Form>
       );
 }
 
-export default ProfileLoginForm;
+export default CreateProfile;

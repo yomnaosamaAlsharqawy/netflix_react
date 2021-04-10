@@ -11,25 +11,26 @@ import RegisterPlanForm from './components/accounts/RegisterPlanForm';
 // Profiles
 import ProfileLoginForm from './components/profiles/ProfileLoginForm';
 import ProfileList from './components/profiles/ProfileList';
+import CreateProfile from './components/profiles/CreateProfile';
 
 
 
 ReactDOM.render(
-    // <App />
+    <App />
 
     // Accounts
     // <GetStartedForm />
     // <LoginForm />
     // <RegistrationForm />
     // <RegisterPlanForm />
-    <RegisterPhoneNumberForm />
+    // <RegisterPhoneNumberForm />
 
 
     // Profiles
     // <ProfileLoginForm />
     // <ProfileList />
+    // <CreateProfile />
 
-    // test
 
 ,document.getElementById('root')
 );
