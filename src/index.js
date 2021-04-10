@@ -9,6 +9,7 @@ import RegistrationForm from './components/accounts/RegistrationForm'
 import ProfileLoginForm from './components/profiles/ProfileLoginForm';
 import ProfileList from './components/profiles/ProfileList';
 import CreateProfile from './components/profiles/CreateProfile';
+import UpdateProfile from './components/profiles/UpdateProfile';
 
 
 
@@ -24,6 +25,7 @@ ReactDOM.render(
     // <ProfileLoginForm />
     // <ProfileList />
     // <CreateProfile />
+    //<UpdateProfile />
 
 
 ,document.getElementById('root')

@@ -67,6 +67,22 @@ const profileApi = {
         return [data, res.status];
     },
 
+    updateProfile: async function (profile){
+        const URL = BASE_URL+PROFILES_BASE_URL+`${PROFILE_ID}/`
+        
+        const requestOptions = {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(profile)
+        };
+        
+        const res = await fetch(URL, requestOptions);
+        const data = await res.json();
+        return [data, res.status];
+    },
+
 }
 
 export default profileApi;
