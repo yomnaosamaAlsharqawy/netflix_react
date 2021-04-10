@@ -1,14 +1,19 @@
 import { useState } from "react";
-import './card.styles.css'
+import './ProfileCard.css'
 
-export const Card = (props) => {
-
-  console.log(props)
+export const ProfileCard = (props) => {
 
   return (
     <div>
-      <img className="cardimg" alt="profile" src={props.profile.image_url} />
-      <h2 className="secondRowInfo">{props.profile.name}</h2>
+      
+      <div className="profile-card">
+        <a><img className="profile-image" alt="profile" src={props.profile.image_url} /></a>
+        <div className="profile-details">
+          <div className="profile-name mt-2">{props.profile.name}</div>
+          <div className="profile-lock fa fa-lock mt-2"></div>
+        </div>
+      </div>
+
     </div>
   );
 };
