@@ -19,14 +19,19 @@ function CreateProfile() {
         image_id: 1
       };
 
-      const response = await profileApi.createProfile(profileData);
+      const [response, status] = await profileApi.createProfile(profileData);
       
-      if (response) {
-        console.log(response)
-      } else {
-        console.log(response)
-        setNameError("!!!!!");
+      if(status == 400) {
+        setNameError("Profile name can't be empty")
+        console.log("profile name error")
       }
+      else if (status == 201) {
+          console.log("Created", response)  //Profile created -> route
+      }
+      else {
+          console.log("Unknown error", response, status)
+      }
+      
     };
 
     return (
