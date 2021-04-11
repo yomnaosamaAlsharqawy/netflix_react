@@ -18,12 +18,12 @@
 .heroContent{
     display: flex;
     flex-direction: column;
-    margin: 4em 0 0 5%;
+    margin: 10em 0 0 5%;
     color: white;
 }
 
 .heroTitle{
-    font-size: 5.5em;
+    font-size: 7.5em;
     font-weight: bolder;
     margin-bottom: 0;
     line-height: 0.9em;
@@ -31,7 +31,7 @@
 }
 
 .heroParagraph{
-    font-size: 1.3em;
+    font-size: 2em;
     width: 50%;
 }
 
@@ -40,8 +40,8 @@
 }
 
 .heroButton1{
-    padding: 0.65em 1.5em 0.65em 1.5em;
-    color: black;
+    padding: 0.9em 2.25em 0.9em 2.25em;
+    color: rgb(0, 0, 0);
     background-color: white;
     border-radius: 0.2em;
     font-weight: bold;
@@ -53,7 +53,8 @@
 }
 
 .heroButton2{
-    padding: 0.65em 1.5em 0.65em 1.5em;
+    font-size: 1.1em;
+    padding: 0.9em 2.25em 0.9em 2.25em;
     color: white;
     background-color: rgba(255,255,255,0.5);
     border-radius: 0.2em;

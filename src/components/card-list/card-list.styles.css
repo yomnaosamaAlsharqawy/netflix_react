@@ -1,19 +1,9 @@
+  
 .card-list {
-    width: 100vw;
-    margin: 0 0 0 0em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #742;
-    margin-bottom: 5em;
+  width: 85vw;
+  margin: 0 auto 10em auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
 
-  }
-
-  @media only screen and (max-width: 700px) {
-    .card-list {
-      min-width: 55vw;
-      margin: 0 auto 2em auto;
-      
-    }
-  }
-
+}

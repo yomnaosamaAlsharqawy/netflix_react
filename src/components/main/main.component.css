@@ -16,7 +16,7 @@
     justify-content:center;
     font-family: 'Fredoka One';
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 2.25em;
     color: rgb(156, 0, 0);
     height:100%;
     margin: auto 0 auto 0;
@@ -62,7 +62,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 0 1em 0 1em;
-    font-size: 1em;
+    font-size: 1.5em;
     transform: translateZ(0);
     transition: transform 0.25s ease-out;
 }

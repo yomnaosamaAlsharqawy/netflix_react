@@ -6,20 +6,25 @@ import LoginForm from './components/forms/LoginForm';
 import GetStartedForm from './components/forms/GetStartedForm';
 // Profiles
 import ProfileLoginForm from './components/forms/ProfileLoginForm';
+// GetStarted
+import GetStarted from './pages/GetStarted/GetStarted'
+import Login from './pages/Login/Login'
 
 
 
 
 ReactDOM.render(
-    // <App />
+     <App />
 
     // Accounts
     // <LoginForm />
     // <GetStartedForm />
 
     // Profiles
-    <ProfileLoginForm />
-
+    // <ProfileLoginForm />
+    //  <GetStarted/>
+    // <Login/>
+    
 ,document.getElementById('root')
 );
 

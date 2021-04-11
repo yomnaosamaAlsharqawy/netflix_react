@@ -1,0 +1,386 @@
+body{
+    background-color: black;
+
+}
+
+.getStartedHero{
+    background-image: 
+    linear-gradient(to bottom, rgba(0,0, 0, .65), rgba(0,0, 0, .65)), 
+    url(https://assets.nflxext.com/ffe/siteui/vlv3/538717c0-f271-40e9-a99e-b07f9c521322/61bdaac4-d853-4944-9d67-5c5cedd2a201/EG-en-20210201-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0.5em solid rgb(56, 56, 56);
+
+}
+
+.getStartedNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.getStartedNav h1{
+    color: red;
+    margin: 0.75em 1.5em;
+}
+.getStartedNavButton{
+    padding: 0.3em 0.75em 0.5em 0.75em;
+    border-radius: 5px;
+    background-color: red;
+    margin: 0.5em 3em;
+    color: white;
+}
+
+
+.getStartedHeroText{
+    text-align: center;
+    color: white;
+}
+
+.getStartedHeroText h1{
+    margin: auto;
+    font-size: 4em;
+    font-weight: bold;
+    line-height: 1.1em;
+    width: 40%;
+    margin-bottom: 0.25em;
+}
+.getStartedHeroText h2{
+    font-size: 4.5em;
+}
+
+.getStartedForm{
+    color: white;
+    margin: auto;
+}
+
+.getStartedSecondContainer{
+    display: flex;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5em solid rgb(56, 56, 56);
+}
+
+.SecondText{
+    width: 50%;
+}
+
+.SecondText h1{
+    color: white;
+    text-align: left;
+    margin-left:22%;
+    margin-bottom: 0.5em;
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.SecondText h3{
+    color: white;
+    margin-left: 22%;
+    font-size: 2.25em;
+}
+
+.SecondView{
+    width: 50%;
+    text-align: center;
+    border: solid red 2px;
+}
+
+
+
+.VideoContainer video{
+    position: absolute;
+    left: 57.1%;
+    top: 115%;
+    height: 35.5%;
+    width: 35.5%;
+}
+
+.VideoContainer img{
+    margin-bottom: 1em;
+    z-index: 1;
+    width: 78%;
+    position: relative;
+}
+
+.getStartedThirdContainer{
+    display: flex;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5em solid rgb(56, 56, 56);
+}
+
+.ThirdText{
+    width: 50%;
+}
+
+.ThirdText h1{
+    color: white;
+    text-align: left;
+    margin-left: 6%;
+    margin-bottom: 0.5em;
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.ThirdText h3{
+    color: white;
+    text-align: left;
+    margin-left: 6%;
+    font-size: 2.25em;
+    width: 90%;
+}
+
+.ThirdView{
+    width: 50%;
+    text-align: center;
+}
+
+.ThirdView img{
+    width: 75%;
+    margin-bottom: 4em;
+}
+
+.getStartedFourthContainer{
+    display: flex;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5em solid rgb(56, 56, 56);
+}
+
+.FourthText{
+    width: 50%;
+}
+
+.FourthText h1{
+    color: white;
+    text-align: left;
+    margin-left: 22%;
+    margin-bottom: 0.5em;
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.FourthText h3{
+    color: white;
+    margin-left: 22%;
+    font-size: 2.25em;
+}
+
+.FourthView{
+    width: 50%;
+
+
+
+}
+
+
+.VideoContainerTwo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+
+.VideoContainerTwo video{
+
+    margin-left: -63%;
+    margin-top: -15%;
+    height: 100%;
+    width: 28em;
+}
+
+
+
+.VideoContainerTwo img{
+    margin-bottom: -2em;
+    margin-left: 5em;
+    z-index: 1;
+    height: 33em;
+
+}
+
+
+
+
+.getStartedFifthContainer{
+    height: 140vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5em solid rgb(56, 56, 56);
+}
+
+.getStartedFifthContainer h1{
+    color: white;
+    margin-top: 1.1em;
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.getStartedFooter{
+    font-size: 1.35em;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.getStartedFooterFirstRow{
+    text-align: left;
+    margin-bottom: 1.5em;
+}
+
+.getStartedFooterFirstRow a{
+    color: rgb(128, 128, 128);
+    margin-left: 20%
+}
+
+.getStartedFooterSecondRow{
+    align-self: center;
+    display: grid;
+    width: 59vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px
+
+}
+
+
+
+.getStartedFooterSecondRow a{
+    font-size: 1em;
+    color: rgb(128, 128, 128);
+
+}
+
+.getStartedFooterThirdRow{
+    margin: 0.5em 0 0.5em 20%
+}
+
+.getStartedFooterFourthRow{
+    color: rgb(128, 128, 128);
+    margin: 1em 0 0 20%
+}
+
+
+@media screen and (min-width: 0) and (max-width: 480px) and (max-aspect-ratio: 4 / 3) {
+    html body {
+        font-size: 1.5vw;
+    }
+  }
+  
+  @media screen and (max-width: 480px) and (orientation: landscape) {
+    html body {
+        font-size: 1.5vw;
+    }
+  } 
+  
+  @media screen and (min-width: 600px) and (max-width: 840px) and (orientation: landscape) {
+    html body {
+        font-size: 1.2vw;
+    }
+    .VideoContainerTwo video{
+
+        margin-left: -88%;
+        margin-top: -20%;
+        height: 100%;
+        width: 28em;
+    }
+  }
+
+
+  
+  @media screen and (min-width: 481px) and (max-width: 840px) and (max-aspect-ratio: 4 / 3) {
+    html body {
+        font-size: 1vw;
+    }
+  }
+  
+  @media screen and (min-width: 841px) and (max-width: 1280px) and (orientation: landscape) {
+    html body {
+        font-size: .85vw;
+    }
+
+    
+  }
+
+  @media screen and (min-width: 665px) and (max-width: 780px){
+    .VideoContainerTwo video{
+
+        margin-left: -74%;
+        margin-top: -20%;
+        height: 100%;
+        width: 28em;
+    }
+  }
+
+  @media screen and (min-width: 780px) and (max-width: 800px){
+    .VideoContainerTwo video{
+
+        margin-left: -89%;
+        margin-top: -20%;
+        height: 100%;
+        width: 28em;
+    }
+  }
+
+  @media screen and (min-width: 760px) and (max-width: 780px){
+    .VideoContainerTwo video{
+
+        margin-left: -86%;
+        margin-top: -20%;
+        height: 100%;
+        width: 28em;
+    }
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 655px){
+    .VideoContainerTwo video{
+
+        margin-left: -74%;
+        margin-top: -20%;
+        height: 100%;
+        width: 28em;
+    }
+  }
+
+  @media screen and (min-width: 655px) and (max-width: 665px){
+    .VideoContainerTwo video{
+
+        margin-left: -74%;
+        margin-top: -20%;
+        height: 100%;
+        width: 28em;
+    }
+  }
+
+  @media screen and (min-width: 480px ) and (max-width: 600px){
+    .VideoContainerTwo video{
+
+        margin-left: -80%;
+        margin-top: -20%;
+        height: 100%;
+        width: 28em;
+    }
+  }
+
+  @media screen and (max-width: 480px){
+    .VideoContainerTwo video{
+
+        margin-left: -80%;
+        margin-top: -30%;
+        height: 100%;
+        width: 20em;
+    }
+  }
