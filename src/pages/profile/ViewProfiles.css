@@ -1,0 +1,23 @@
+body {
+    background-color: #141414;
+}
+
+.profiles-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question {
+    color: #fefefe;
+}
+
+.profile-list {
+    margin-top: 10px;
+}
+
+.manage-button {
+    color: #7f7f7f;
+    border-style: solid;
+    font-size: 2em;
+}

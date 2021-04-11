@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.profile-card {
+    padding: 1vw;
+    box-shadow: 10px;
+}
+
+.profile-image {
+    border-radius: 7px;
+    width: 15em
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-name {
+    text-align: center;
+    color: #7f7f7f;
+    font-size: 1.6em;
+}
+
+.profile-lock.fa {
+    color: #7f7f7f;
+    text-align: center;
+    font-size: 2em;
+}

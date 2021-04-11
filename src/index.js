@@ -19,6 +19,8 @@ import ProfileLoginForm from './components/profiles/ProfileLoginForm';
 import ProfileList from './components/profiles/ProfileList';
 import CreateProfile from './components/profiles/CreateProfile';
 import UpdateProfile from './components/profiles/UpdateProfile';
+import ViewProfiles from './pages/profile/ViewProfiles';
+import AddProfile from './pages/profile/AddProfile';
 
 
 
@@ -38,11 +40,17 @@ ReactDOM.render(
     // <RegisterPhoneNumberForm />
 
 
-    // Profiles
-    // <ProfileLoginForm />
+    /*** Profiles **/
+    
+    // Pages
+    // <ViewProfiles />
+    // <AddProfile />
+
+    //Components
     // <ProfileList />
+    // <ProfileLoginForm />
     // <CreateProfile />
-    //<UpdateProfile />
+    // <UpdateProfile />
 
 
 ,document.getElementById('root')
