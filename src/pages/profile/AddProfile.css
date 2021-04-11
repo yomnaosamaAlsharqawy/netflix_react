@@ -28,13 +28,16 @@ body {
     width: 15em
 }
 
+.error-message {
+    font-size: 2em;
+}
+
 .name-input {
     display: inline-block;
-    height: 4.5em;
-    width: 25em;
+    height: 5em;
+    width: 28em;
     background-color: #666666;
     color: #ffffff;
-    font-size: 1.2em;
 }
 
 input {
@@ -43,7 +46,7 @@ input {
     height: 100%;
     width: 100%;
     background-color: #666666;
-    font-size: 2em;
+    font-size: 2.5em;
     color: #ffffff;
     padding-left: 1em;
 }

@@ -46,7 +46,7 @@ function AddProfile (){
                     <hr className="line" />
 
                     {nameError && 
-                    <p className="text-danger small"> 
+                    <p className="error-message text-danger small"> 
                     {nameError}
                     </p>}
                     

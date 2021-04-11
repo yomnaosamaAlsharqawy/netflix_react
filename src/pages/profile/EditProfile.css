@@ -1,0 +1,142 @@
+body {
+    background-color: #141414;
+}
+
+.edit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit-title {
+    color: #fefefe;
+    font-size: 6em;
+}
+
+.middle-section {
+    padding-top: 2.1em;
+    border-top: solid;
+    border-color: #2c2c2c;
+    border-width: 1px;
+    display: flex;
+}
+
+.profile-edit-image {
+    border-radius: 3px;
+    width: 20em
+}
+
+.edit-section {
+    padding-left: 2em;
+}
+
+.edit-name-input {
+    display: inline-block;
+    height: 5em;
+    width: 85%;
+    background-color: #666666;
+    color: #ffffff;
+}
+
+input {
+    outline: none;
+    border-style: none;
+    height: 100%;
+    width: 100%;
+    background-color: #666666;
+    font-size: 2.5em;
+    color: #ffffff;
+    padding-left: 1em;
+}
+
+::placeholder {
+    color: #ffffff;
+}
+
+.error-message {
+    font-size: 2em;
+}
+
+.profile-lock-container {
+    margin-top: 1.7em;
+    margin-bottom: 1.7em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: #2c2c2c;
+    border-width: 1px;
+}
+
+.profile-lock-status {
+    font-size: 2em;
+    color: #c5cdcc;
+    margin-left: 1em;
+}
+
+.profile-status {
+    font-size: 2em;
+    color: #c5cdcc;
+    font-weight: bold;
+}
+
+.change-picture-button {
+    margin-bottom: 1em;
+    color: #7f7f7f;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 2em;
+    letter-spacing: 1px;
+    width: 85%;
+    text-align: center;
+}
+
+.image-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+    background-color: #141414;
+    border-style: solid;
+    border-color: #2c2c2c;
+    border-width: 1px;
+    border-radius: 5px;
+    height: auto;
+    width: auto;
+    margin-bottom: 1.7em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    place-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.image-item {
+    width: 12em;
+}
+
+.buttons-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: solid;
+    padding-top: 1.7em;
+    border-color: #2c2c2c;
+    border-width: 1px;
+}
+
+.save-button {
+    background-color: #ffffff;
+    border-style: none;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+.cancel-button {
+    color: #7f7f7f;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
