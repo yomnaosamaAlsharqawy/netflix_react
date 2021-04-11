@@ -67,6 +67,21 @@ const profileApi = {
         return [data, res.status];
     },
 
+    getOneProfile: async function (){
+        const URL = BASE_URL+PROFILES_BASE_URL+`${PROFILE_ID}/`
+        
+        const requestOptions = {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            },
+        };
+        
+        const res = await fetch(URL, requestOptions);
+        const data = await res.json();
+        return data;
+    },
+
     updateProfile: async function (profile){
         const URL = BASE_URL+PROFILES_BASE_URL+`${PROFILE_ID}/`
         

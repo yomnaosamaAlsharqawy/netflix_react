@@ -26,7 +26,7 @@ import EditProfile from './pages/profile/EditProfile';
 
 
 ReactDOM.render(
-    <App />
+    //<App />
 
     // Accounts
 
@@ -46,7 +46,7 @@ ReactDOM.render(
     // Pages
     //<ViewProfiles />
     //<AddProfile />
-    //<EditProfile />
+    <EditProfile />
 
     //Components
     // <ProfileList />
