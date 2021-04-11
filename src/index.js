@@ -1,7 +1,13 @@
 import ReactDOM from 'react-dom';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 // Accounts
+
+  // Pages
+import RegistrationPage from './pages/registration/RegistrationPage';
+
+  // Components
 import GetStartedForm from './components/accounts/GetStartedForm';
 import LoginForm from './components/accounts/LoginForm';
 import RegistrationForm from './components/accounts/RegistrationForm';
@@ -20,6 +26,11 @@ ReactDOM.render(
     <App />
 
     // Accounts
+
+    // Pages
+    // <RegistrationPage />
+
+    // Components
     // <GetStartedForm />
     // <LoginForm />
     // <RegistrationForm />
