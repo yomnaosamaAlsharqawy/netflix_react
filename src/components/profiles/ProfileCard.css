@@ -4,13 +4,21 @@
 }
 
 .profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 1vw;
     box-shadow: 10px;
 }
 
 .profile-image {
     border-radius: 7px;
-    width: 15em
+    width: 15em;
+    
+}
+
+.edit-image {
+    opacity: 30%;
 }
 
 .profile-details {
@@ -29,4 +37,17 @@
     color: #7f7f7f;
     text-align: center;
     font-size: 2em;
+}
+
+.edit-disabled {
+    display: none;
+}
+
+.edit-active {
+    position: absolute;
+    margin-top: -3em;
+    margin-left: 2.1em;
+    z-index: 1;
+    color: #ffffff;
+    font-size: 3em;
 }

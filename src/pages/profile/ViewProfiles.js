@@ -5,7 +5,7 @@ function ViewProfiles (){
 
     return (
         <div>
-          <div className="profiles-container mt-5">
+          <div className="profiles-container">
             <h1 className="question">Who's watching?</h1>
             <ProfileList className="profile-list" />
             <div className="manage-button px-3 py-1"><a>MANAGE PROFILES</a></div>
