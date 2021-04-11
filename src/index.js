@@ -14,6 +14,7 @@ import ProfileList from './components/profiles/ProfileList';
 import CreateProfile from './components/profiles/CreateProfile';
 import UpdateProfile from './components/profiles/UpdateProfile';
 import ViewProfiles from './pages/profile/ViewProfiles';
+import AddProfile from './pages/profile/AddProfile';
 
 
 
@@ -30,8 +31,9 @@ ReactDOM.render(
 
     /*** Profiles **/
     
-    //Pages
-    //<ViewProfiles />
+    // Pages
+    // <ViewProfiles />
+    // <AddProfile />
 
     //Components
     // <ProfileList />
