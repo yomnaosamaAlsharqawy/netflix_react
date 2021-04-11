@@ -19,7 +19,7 @@ function EditProfile (){
     const [currentProfile, setcurrentProfile] = useState({})
     const [currentName, setcurrentName] = useState(currentProfile.name)
 
-    
+
     const handleClick = () => {
         sethidden(!hidden)
     }
@@ -57,6 +57,19 @@ function EditProfile (){
         }
         else {
             console.log("Unknown error", response, status)
+        }
+    }
+
+    const handleDelete = async (e) => {
+        e.preventDefault();
+
+        const status = await profileApi.deleteProfile()
+
+        if (status == 204) {
+            console.log("Deleted", status)
+        }
+        else {
+            console.log("Unknown error", status)
         }
     }
 
@@ -102,7 +115,7 @@ function EditProfile (){
                     <div className="buttons-section mt-5">
                         <span className="save-button px-4 py-2"><a onClick={handleSubmit}>SAVE</a></span>
                         <span className="cancel-button ml-3 px-4 py-2"><a>CANCEL</a></span>
-                        <span className="cancel-button ml-3 px-4 py-2"><a>DELETE PROFILE</a></span>
+                        <span className="cancel-button ml-3 px-4 py-2"><a onClick={handleDelete}>DELETE PROFILE</a></span>
                     </div>
 
                 </div>

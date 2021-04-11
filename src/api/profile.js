@@ -98,6 +98,20 @@ const profileApi = {
         return [data, res.status];
     },
 
+    deleteProfile: async function (){
+        const URL = BASE_URL+PROFILES_BASE_URL+`${PROFILE_ID}/`
+        
+        const requestOptions = {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            },
+        };
+        
+        const res = await fetch(URL, requestOptions);
+        return res.status;
+    },
+
 }
 
 export default profileApi;
