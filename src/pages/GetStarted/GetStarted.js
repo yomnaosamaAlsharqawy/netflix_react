@@ -66,25 +66,12 @@ export default function GetStarted() {
                     </h3>
                 </div>
                 <div className="FourthView">
-                <div className="VideoContainerTwo">
+                    <div className="VideoContainerTwo">
                         <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" alt=""/>
                         <video autoPlay="" playsInline="" muted="" loop="" source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" type="video/mp4"> </video>
                     </div>
                 </div>
 
-            </div>
-            <div className="getStartedFifthContainer">
-                <div className="FifthContainerHeader">
-                    <h1>
-                        Frequently Asked Questions
-                    </h1>
-                </div>
-                <div className="FifthContainerAccordion">
-                    Insert Accordion Here
-                </div>
-                <div className="getStartedForm">
-                    Insert Form Here
-                </div>
             </div>
             <div className="getStartedFooter">
                 <div className="getStartedFooterFirstRow">

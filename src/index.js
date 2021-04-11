@@ -14,7 +14,7 @@ import Login from './pages/Login/Login'
 
 
 ReactDOM.render(
-     <App />
+    // <App />
 
     // Accounts
     // <LoginForm />
@@ -22,7 +22,7 @@ ReactDOM.render(
 
     // Profiles
     // <ProfileLoginForm />
-    //  <GetStarted/>
+      <GetStarted/>
     // <Login/>
     
 ,document.getElementById('root')
