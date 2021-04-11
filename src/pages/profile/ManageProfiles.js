@@ -12,7 +12,7 @@ function ManageProfile (){
 
     return (
         <div>
-          <div className="profiles-container mt-5">
+          <div className="profiles-container">
             <h1 className="question">Manage Profiles:</h1>
             <ProfileList className="profile-list" editMode={editMode} seteditMode={seteditMode}/>
             <span className="done-button px-4 py-2"><a onClick={handleDone}>DONE</a></span>

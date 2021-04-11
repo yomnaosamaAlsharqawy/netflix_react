@@ -3,7 +3,7 @@ body {
 }
 
 .profiles-container {
-    margin-top: 1em;
+    margin-top: 20em;
     display: flex;
     flex-direction: column;
     align-items: center;

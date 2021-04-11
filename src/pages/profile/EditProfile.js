@@ -81,7 +81,7 @@ function EditProfile (){
                     <div className="edit-title">Edit Profile</div>
 
                     <div className="middle-section">
-                        <div className="image-section">
+                        <div>
                             <img className="profile-edit-image" src={currentProfile.image_url}></img>
                         </div>
                         <div className="edit-section">
