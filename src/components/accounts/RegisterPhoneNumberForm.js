@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useInput } from "../../hooks/useInput";
 import accountApi from "../../api/account";
-import { Col, Form, Button, } from "react-bootstrap";
+import { Row, Col, Form, Button } from "react-bootstrap";
 
 function RegistrationForm() {
   const [countryCodeProps, resetCoutnryCode] = useInput("EG");
@@ -11,26 +11,23 @@ function RegistrationForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const [data, status] = await accountApi.registerPhoneNumber({
-      id: 1,                                             // <-- from context
+      id: 1, // <-- from context
       country_code: countryCodeProps.value,
       phone_number: phoneNumberProps.value,
     });
-    console.log(data, status)
+    console.log(data, status);
     if (status === 400 && data.phone_number) {
-      setPhoneNumberError(data.phone_number)
+      setPhoneNumberError(data.phone_number);
     }
   };
 
   return (
     <Form>
-      <Form.Group as={Col} xs="3" >
-        <Form.Control
-          type="text"
-          placeholder="code"
-          {...countryCodeProps}
-        />
+      <Row>
+      <Form.Group as={Col} xs="3">
+        <Form.Control type="text" placeholder="code" {...countryCodeProps} />
       </Form.Group>
-      <Form.Group as={Col} xs="5">
+      <Form.Group as={Col} xs="7">
         <Form.Control
           type="text"
           placeholder="Phone Number"
@@ -43,7 +40,20 @@ function RegistrationForm() {
           </Form.Control.Feedback>
         )}
       </Form.Group>
+      </Row>
 
+      <div class="mt-4 small text-muted">
+        By checking the checkbox below, you agree to our Terms of Use, Privacy
+        Statement, and that you are over 18. Netflix will automatically continue
+        your membership and charge the monthly membership fee (currently EGP200)
+        to your payment method until you cancel. You may cancel at any time to
+        avoid future charges.
+      </div>
+     
+      <Form.Group controlId="formCheckbox">
+        <Form.Check type="checkbox" label="I Agree" />
+      </Form.Group>
+      
       <Button
         className="w-100"
         variant="danger"

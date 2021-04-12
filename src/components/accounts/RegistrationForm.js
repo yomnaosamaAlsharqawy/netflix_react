@@ -67,7 +67,7 @@ function RegistrationForm() {
         type="submit"
         onClick={handleSubmit}
       >
-        Register
+        Continue
       </Button>
     </Form>
   );
