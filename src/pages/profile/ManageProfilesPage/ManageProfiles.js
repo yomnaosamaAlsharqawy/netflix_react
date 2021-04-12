@@ -1,5 +1,5 @@
 import './ManageProfiles.css'
-import ProfileList from '../../components/profiles/ProfileList'
+import ProfileList from '../../../components/profiles/ProfileList'
 import { useState } from 'react'
 
 function ManageProfile (){
@@ -11,8 +11,8 @@ function ManageProfile (){
     }
 
     return (
-        <div>
-          <div className="profiles-container">
+        <div className="profile-body">
+          <div className="manage-profiles-container">
             <h1 className="question">Manage Profiles:</h1>
             <ProfileList className="profile-list" editMode={editMode} seteditMode={seteditMode}/>
             <span className="done-button px-4 py-2"><a onClick={handleDone}>DONE</a></span>

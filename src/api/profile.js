@@ -1,5 +1,5 @@
 const PROFILE_ID = 1
-const ACCOUNT_ID = 13
+const ACCOUNT_ID = 2
 
 const BASE_URL = "http://localhost:8000/"
 const PROFILES_BASE_URL = "api/accounts/profiles/"

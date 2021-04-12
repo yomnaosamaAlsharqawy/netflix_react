@@ -19,10 +19,11 @@ import ProfileLoginForm from './components/profiles/ProfileLoginForm';
 import ProfileList from './components/profiles/ProfileList';
 import CreateProfile from './components/profiles/CreateProfile';
 import UpdateProfile from './components/profiles/UpdateProfile';
-import ViewProfiles from './pages/profile/ViewProfiles';
-import AddProfile from './pages/profile/AddProfile';
-import EditProfile from './pages/profile/EditProfile';
-import ManageProfiles from './pages/profile/ManageProfiles';
+import ViewProfiles from './pages/profile/ViewProfilesPage/ViewProfiles';
+import AddProfile from './pages/profile/AddProfilePage/AddProfile';
+import EditProfile from './pages/profile/EditProfilePage/EditProfile';
+import ManageProfiles from './pages/profile/ManageProfilesPage/ManageProfiles';
+import ProfileLogin from './pages/profile/ProfileLoginPage/ProfileLogin';
 
 
 ReactDOM.render(
@@ -48,6 +49,7 @@ ReactDOM.render(
     // <AddProfile />
     // <EditProfile />
     // <ManageProfiles />
+    // <ProfileLogin />
 
     //Components
     // <ProfileList />

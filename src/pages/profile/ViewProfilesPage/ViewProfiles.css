@@ -2,25 +2,23 @@ body {
     background-color: #141414;
 }
 
-.profiles-container {
-    margin-top: 20em;
+.view-profiles-container {
+    margin-top: 14em;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .question {
-    color: #fefefe;
+    color: #ffffff;
 }
 
 .profile-list {
     margin-top: 10px;
 }
 
-.done-button {
-    background-color: #ffffff;
-    border-style: none;
+.manage-button {
+    color: #7f7f7f;
+    border-style: solid;
     font-size: 2em;
-    letter-spacing: 1px;
-    font-weight: bold;
 }

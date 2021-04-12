@@ -1,7 +1,7 @@
 import './AddProfile.css'
 import { useState } from "react";
-import { useInput } from "../../hooks/useInput";
-import profileApi from "../../api/profile";
+import { useInput } from "../../../hooks/useInput";
+import profileApi from "../../../api/profile";
 
 
 const ACCOUNT_ID = 2
@@ -37,8 +37,8 @@ function AddProfile (){
     };
 
     return (
-        <div>
-            <div className="profiles-container">
+        <div className="profile-body">
+            <div className="add-profiles-container">
                 <div className="profiles-sub-container">
                     <h1 className="title">Add Profile</h1>
                     <p className="sub-title">Add a profile for another person watching Netflix</p>

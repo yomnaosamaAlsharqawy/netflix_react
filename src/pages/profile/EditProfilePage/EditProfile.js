@@ -1,7 +1,7 @@
 import './EditProfile.css'
 import { useState, useEffect } from 'react'
-import { useInput } from "../../hooks/useInput";
-import profileApi from '../../api/profile'
+import { useInput } from "../../../hooks/useInput";
+import profileApi from '../../../api/profile'
 
 
 function EditProfile (){
@@ -74,9 +74,9 @@ function EditProfile (){
     }
 
     return (
-        <div>
+        <div className="profile-body">
             <div className="edit-container">
-                <div className="edit-profile-container">
+                <div className="">
 
                     <div className="edit-title">Edit Profile</div>
 
