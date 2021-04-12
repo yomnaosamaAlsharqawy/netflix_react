@@ -27,12 +27,12 @@ import ProfileLogin from './pages/profile/ProfileLoginPage/ProfileLogin';
 
 
 ReactDOM.render(
-    // <App />
+    <App />
 
     // Accounts
 
     // Pages
-    <RegistrationPage />
+    //<RegistrationPage />
 
     // Components
     // <GetStartedForm />
