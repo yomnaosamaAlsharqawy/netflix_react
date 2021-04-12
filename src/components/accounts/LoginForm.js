@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useInput } from "../../hooks/useInput";
 import accountApi from "../../api/account";
-import {Form, Button} from 'react-bootstrap';
+import { Form, Button } from "react-bootstrap";
+
+// import AccountContext from "../../context/AccountContext";
+// import { useContext } from "react";
 
 function LoginForm() {
-  const [emailProps, resetEmail] = useInput("");
+  const account = JSON.parse(localStorage.getItem('account'));
+  const email = account ? account.username : "";
+  const [emailProps, resetEmail] = useInput(email);
   const [emailError, setEmailError] = useState(null);
   const [passwordProps, resetPassword] = useInput("");
 
@@ -23,20 +28,22 @@ function LoginForm() {
 
   return (
     <Form>
-      {emailError && 
-        <p className="text-danger small"> 
-          {emailError}
-        </p>}
+      {emailError && <p className="text-danger">{emailError}</p>}
       <Form.Group controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email"  {...emailProps} />
+        <Form.Label className="text-white">Email address</Form.Label>
+        <Form.Control style={{height: "3em"}} className="LoginInput" type="email" placeholder="Email Address" {...emailProps} />
       </Form.Group>
 
       <Form.Group controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" {...passwordProps} />
+        <Form.Label className="text-white">Password</Form.Label>
+        <Form.Control
+         style={{height: "3em"}} 
+          type="password"
+          placeholder="Password"
+          {...passwordProps}
+        />
       </Form.Group>
-      <Button variant="primary" type="submit" onClick={handleSubmit} >
+      <Button style={{height: "3em", backgroundColor:"red"}} className="w-100 border-radius-0 mt-3" variant="danger" type="submit" onClick={handleSubmit}>
         Login
       </Button>
     </Form>

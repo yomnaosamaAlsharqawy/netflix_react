@@ -1,37 +1,48 @@
 import { useInput } from "../../hooks/useInput";
 import accountApi from "../../api/account";
 import { Col, Form, Button } from "react-bootstrap";
+// import AccountContext from '../../context/AccountContext';
+// import {useContext} from 'react';
+import { useHistory } from "react-router-dom";
 
-function LoginForm() {
-  const [emailProps, resetEmail] = useInput("");
+function GetStartedForm() {
+  const history = useHistory();
+  const acc = localStorage.getItem("account");
+  const account = acc ? JSON.parse(acc) : null;
+  const email = account ? account.username : "";
+  const [emailProps, ] = useInput(email);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = await accountApi.getStarted({
+    const [data, status] = await accountApi.getStarted({
       username: emailProps.value,
     });
-    if (data.exists) {
-      console.log("userID", data.id);
-      const accountDetails = await accountApi.accountDetails(data.id); // <-- save user details into context
-      console.log(accountDetails);
-      console.log("redirect to login page");                           // <-- Handle routing
-    } else {
-      console.log("redirect to register page");
-    }
+      if (status === 404 ) {
+        await localStorage.setItem('account', JSON.stringify({username: emailProps.value, registration_state: 1}));
+        history.push("/signup");
+
+      } else {
+      
+        const accountDetails = await accountApi.accountDetails(data.id);
+        localStorage.setItem("account", JSON.stringify(accountDetails));
+        history.push("/login");
+      }
   };
 
   return (
-    <Form>
-      <Form.Row className="align-items-center">
+    <Form className="col-md-6">
+      <Form.Row className="w-100 align-items-center">
         <Form.Group as={Col} xs="8" controlId="formBasicEmail">
           <Form.Control
+            style={{ height: "4em", fontSize: "1.5em", marginRight: "0" }}
             type="email"
             placeholder="Email Address"
             {...emailProps}
           />
         </Form.Group>
-        <Form.Group as={Col} xs="4">
+        <Form.Group as={Col} xs="4" style={{ marginLeft: "0" }}>
           <Button
+            style={{ height: "4em", fontSize: "1.5em", marginLeft: "0" }}
             className="w-100"
             variant="danger"
             type="submit"
@@ -45,4 +56,4 @@ function LoginForm() {
   );
 }
 
-export default LoginForm;
+export default GetStartedForm;
