@@ -31,7 +31,7 @@ ReactDOM.render(
     /** Accounts **/
 
     // Pages
-    <RegistrationPage />
+    // <RegistrationPage />
 
     // Components
     // <GetStartedForm />
@@ -44,10 +44,10 @@ ReactDOM.render(
     /*** Profiles **/
     
     // Pages
-    //<ViewProfiles />
-    //<AddProfile />
-    //<EditProfile />
-    //<ManageProfiles />
+    // <ViewProfiles />
+    <AddProfile />
+    // <EditProfile />
+    // <ManageProfiles />
 
     //Components
     // <ProfileList />
