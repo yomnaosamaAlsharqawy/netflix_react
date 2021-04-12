@@ -9,7 +9,7 @@ import { Navbar, Nav } from "react-bootstrap";
 import "./RegistrationPage.css";
 
 export default function RegistrationPage() {
-  const page = 6;                               // <-- Get page from context
+  const page = 2;                               // <-- Get page from context
   const currentSubPage = () => {
     switch (page) {
       case 1:
