@@ -2,3 +2,7 @@
   border-color: #0099ff;
   box-shadow: none;
 }
+
+.bg-white{
+  cursor: default;
+}
