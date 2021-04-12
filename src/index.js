@@ -26,12 +26,12 @@ import EditProfile from './pages/profile/EditProfile';
 
 
 ReactDOM.render(
-    <App />
+    // <App />
 
-    // Accounts
+    /** Accounts **/
 
     // Pages
-    // <RegistrationPage />
+    <RegistrationPage />
 
     // Components
     // <GetStartedForm />

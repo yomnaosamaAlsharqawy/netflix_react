@@ -20,35 +20,37 @@ export default function RegistrationPage() {
   };
 
   return (
-    <div style={{ fontSize: "1.23em" }}>
-      <Navbar className="border" bg="white">
-        <Navbar.Brand href="#">
-          <img
-            style={{ borderRadius: "0" }}
-            src="/logo.svg"
-            height="45px"
-            width="167px"
-            className="d-inline-block align-top my-2"
-            alt="Netflix Logo"
-          />
-        </Navbar.Brand>
-        <Nav className="ml-auto">
-          <Nav.Link
-            href="#"
-            className="text-dark font-weight-bold"
-            style={{ fontSize: "1.3em" }}
-          >
-            Sign Out
-          </Nav.Link>
-        </Nav>
-      </Navbar>
-      <div className="d-flex justify-content-center my-5">
-        <div className="col-12 col-md-6 col-lg-4 mb-5">
-          {currentSubPage()}
+    <div className="bg-white h-100">
+      <div className="h-100" style={{ fontSize: "1.23em" }}>
+        <Navbar className="border" bg="white">
+          <Navbar.Brand href="#">
+            <img
+              style={{ borderRadius: "0" }}
+              src="/logo.svg"
+              height="45px"
+              width="167px"
+              className="d-inline-block align-top my-2"
+              alt="Netflix Logo"
+            />
+          </Navbar.Brand>
+          <Nav className="ml-auto">
+            <Nav.Link
+              href="#"
+              className="text-dark font-weight-bold"
+              style={{ fontSize: "1.3em" }}
+            >
+              Sign Out
+            </Nav.Link>
+          </Nav>
+        </Navbar>
+        <div
+          className="d-flex justify-content-center align-itmes-between my-5 container"
+        >
+          <div className="col-md-6 col-lg-4 mb-5">{currentSubPage()}</div>
         </div>
-      </div>
-      <div className="bg-light">
-        <h1>footer</h1>
+        <div className="bg-light">
+          <h1>footer</h1>
+        </div>
       </div>
     </div>
   );
