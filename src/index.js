@@ -1,30 +1,60 @@
 import ReactDOM from 'react-dom';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 // Accounts
-import LoginForm from './components/forms/LoginForm';
-import GetStartedForm from './components/forms/GetStartedForm';
+
+  // Pages
+import RegistrationPage from './pages/registration/RegistrationPage';
+
+  // Components
+import GetStartedForm from './components/accounts/GetStartedForm';
+import LoginForm from './components/accounts/LoginForm';
+import RegistrationForm from './components/accounts/RegistrationForm';
+import RegisterPhoneNumberForm from './components/accounts/RegisterPhoneNumberForm';
+import RegisterPlanForm from './components/accounts/RegisterPlanForm';
+
 // Profiles
-import ProfileLoginForm from './components/forms/ProfileLoginForm';
-// GetStarted
-import GetStarted from './pages/GetStarted/GetStarted'
-import Login from './pages/Login/Login'
-
-
+import ProfileLoginForm from './components/profiles/ProfileLoginForm';
+import ProfileList from './components/profiles/ProfileList';
+import CreateProfile from './components/profiles/CreateProfile';
+import UpdateProfile from './components/profiles/UpdateProfile';
+import ViewProfiles from './pages/profile/ViewProfiles';
+import AddProfile from './pages/profile/AddProfile';
+import EditProfile from './pages/profile/EditProfile';
+import ManageProfiles from './pages/profile/ManageProfiles';
 
 
 ReactDOM.render(
     // <App />
 
     // Accounts
-    // <LoginForm />
-    // <GetStartedForm />
 
-    // Profiles
-    // <ProfileLoginForm />
-      <GetStarted/>
-    // <Login/>
+    // Pages
+     <RegistrationPage />
+
+    // Components
+    // <GetStartedForm />
+    // <LoginForm />
+    // <RegistrationForm />
+    // <RegisterPlanForm />
+    // <RegisterPhoneNumberForm />
+
+
+    /*** Profiles **/
     
+    // Pages
+    //<ViewProfiles />
+    //<AddProfile />
+    //<EditProfile />
+    //<ManageProfiles />
+
+    //Components
+    // <ProfileList />
+    // <ProfileLoginForm />
+    // <CreateProfile />
+    // <UpdateProfile />
+
+
 ,document.getElementById('root')
 );
-

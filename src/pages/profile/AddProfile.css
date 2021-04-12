@@ -1,0 +1,71 @@
+body {
+    background-color: #141414;
+}
+
+.line {
+    background-color: #2c2c2c;
+}
+
+.profiles-container {
+    margin-top: 17em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    color: #fefefe;
+    font-size: 8em;
+}
+
+.sub-title {
+    color: #656666;
+    font-size: 2.5em;
+}
+
+.default-image {
+    border-radius: 3px;
+    width: 15em
+}
+
+.error-message {
+    font-size: 2em;
+}
+
+.name-input {
+    display: inline-block;
+    height: 5em;
+    width: 28em;
+    background-color: #666666;
+    color: #ffffff;
+}
+
+input {
+    outline: none;
+    border-style: none;
+    height: 100%;
+    width: 100%;
+    background-color: #666666;
+    font-size: 2.5em;
+    color: #ffffff;
+    padding-left: 1em;
+}
+
+::placeholder {
+    color: #ffffff;
+}
+
+.continue-button {
+    background-color: #ffffff;
+    border-style: solid;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+.cancel-button {
+    color: #7f7f7f;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 2em;
+    letter-spacing: 1px;
+}

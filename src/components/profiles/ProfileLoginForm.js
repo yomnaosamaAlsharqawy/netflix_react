@@ -3,6 +3,7 @@ import { useInput } from "../../hooks/useInput";
 import {Form, Button} from 'react-bootstrap';
 import profileApi from "../../api/profile";
 
+
 function ProfileLoginForm() {
     const [nameProps, resetName] = useInput("");
     const [nameError, setNameError] = useState(null);
@@ -34,7 +35,7 @@ function ProfileLoginForm() {
             </p>}
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Profile Name</Form.Label>
-            <Form.Control type="email" placeholder="Enter profile name"  {...nameProps} />
+            <Form.Control type="text" placeholder="Enter profile name"  {...nameProps} />
           </Form.Group>
     
           <Form.Group controlId="formBasicPassword">

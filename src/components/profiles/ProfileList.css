@@ -1,0 +1,9 @@
+.profile-list {
+    width: 100vw;
+    margin: 0 0 0 0em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5em;
+    /* background-color: rgb(53, 53, 53); */
+}
