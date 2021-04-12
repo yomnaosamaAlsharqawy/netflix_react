@@ -26,12 +26,12 @@ import ManageProfiles from './pages/profile/ManageProfiles';
 
 
 ReactDOM.render(
-    <App />
+    // <App />
 
     // Accounts
 
     // Pages
-    // <RegistrationPage />
+    <RegistrationPage />
 
     // Components
     // <GetStartedForm />
