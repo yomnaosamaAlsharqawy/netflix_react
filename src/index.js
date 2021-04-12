@@ -26,7 +26,7 @@ import ManageProfiles from './pages/profile/ManageProfiles';
 
 
 ReactDOM.render(
-    // <App />
+    <App />
 
     /** Accounts **/
 
@@ -45,7 +45,7 @@ ReactDOM.render(
     
     // Pages
     // <ViewProfiles />
-    <AddProfile />
+    // <AddProfile />
     // <EditProfile />
     // <ManageProfiles />
 
