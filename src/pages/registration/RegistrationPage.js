@@ -32,8 +32,8 @@ export default function RegistrationPage() {
   };
 
   return (
-    <div className="bg-white h-100">
-      <div className="d-flex flex-column h-100" style={{ fontSize: "1.3em" }}>
+    <div className="bg-white" style={{minHeight: "100vh"}}>
+      <div className="d-flex flex-column"  style={{ fontSize: "1.3em", minHeight: "100vh" }}>
         <Navbar className="border" bg="white">
           <Navbar.Brand href="#" style={{ width: "10%" }}>
             <img
