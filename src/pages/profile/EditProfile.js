@@ -81,7 +81,7 @@ function EditProfile (){
                     <div className="edit-title">Edit Profile</div>
 
                     <div className="middle-section">
-                        <div className="image-section">
+                        <div>
                             <img className="profile-edit-image" src={currentProfile.image_url}></img>
                         </div>
                         <div className="edit-section">
@@ -112,7 +112,7 @@ function EditProfile (){
                         ))}
                     </div>
 
-                    <div className="buttons-section mt-5">
+                    <div className="buttons-section">
                         <span className="save-button px-4 py-2"><a onClick={handleSubmit}>SAVE</a></span>
                         <span className="cancel-button ml-3 px-4 py-2"><a>CANCEL</a></span>
                         <span className="cancel-button ml-3 px-4 py-2"><a onClick={handleDelete}>DELETE PROFILE</a></span>

@@ -4,12 +4,11 @@ import { ProfileCard } from "./ProfileCard";
 import { useEffect } from "react";
 import { useState } from "react";
 
-function ProfileList() {
+function ProfileList(props) {
   const [profileList, setProfileList] = useState([]);
 
   useEffect(async () => {
     const profileData = await profileApi.getProfiles();
-    console.log("1-Profiles from ProfileList component", profileData);
     setProfileList(profileData);
   }, []);
 
@@ -28,6 +27,7 @@ function ProfileList() {
           data-id={profile.id}
           key={profile.id}
           profile={profile}
+          editMode={props.editMode}
         />
       ))}
     </div>

@@ -22,7 +22,7 @@ import UpdateProfile from './components/profiles/UpdateProfile';
 import ViewProfiles from './pages/profile/ViewProfiles';
 import AddProfile from './pages/profile/AddProfile';
 import EditProfile from './pages/profile/EditProfile';
-
+import ManageProfiles from './pages/profile/ManageProfiles';
 
 
 ReactDOM.render(
@@ -47,6 +47,7 @@ ReactDOM.render(
     //<ViewProfiles />
     //<AddProfile />
     //<EditProfile />
+    //<ManageProfiles />
 
     //Components
     // <ProfileList />

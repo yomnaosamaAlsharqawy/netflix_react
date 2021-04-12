@@ -17,8 +17,10 @@ body {
     margin-top: 10px;
 }
 
-.manage-button {
-    color: #7f7f7f;
-    border-style: solid;
+.done-button {
+    background-color: #ffffff;
+    border-style: none;
     font-size: 2em;
+    letter-spacing: 1px;
+    font-weight: bold;
 }

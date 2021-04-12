@@ -6,6 +6,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 3em;
+    padding-left: 10em;
+    padding-right: 10em;
 }
 
 .edit-title {
@@ -22,8 +25,9 @@ body {
 }
 
 .profile-edit-image {
-    border-radius: 3px;
-    width: 20em
+    border-radius: 0px;
+    width: 20em;
+    height: 90%;
 }
 
 .edit-section {
@@ -114,6 +118,8 @@ input {
 
 .image-item {
     width: 12em;
+    border-radius: 0px;
+    min-height: 100%;
 }
 
 .buttons-section {
