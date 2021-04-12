@@ -1,7 +1,6 @@
 .SetOneContainer{
     display: flex;
     flex-direction: column;
-    height: 50vh;
     text-align: center;
     color: rgb(41, 41, 41);
 }
