@@ -35,7 +35,7 @@ const {register, handleSubmit } = useForm();
             alert(jsonObj.message)
         }
          }
-    if (localStorage.token){
+    if (true){
 
         return (
             <div className='flexContainerAddSong'>

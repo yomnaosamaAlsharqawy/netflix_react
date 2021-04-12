@@ -13,6 +13,7 @@ import LoginForm from './components/accounts/LoginForm';
 import RegistrationForm from './components/accounts/RegistrationForm';
 import RegisterPhoneNumberForm from './components/accounts/RegisterPhoneNumberForm';
 import RegisterPlanForm from './components/accounts/RegisterPlanForm';
+import AddSong from './components/add-song/add-song.component'
 
 // Profiles
 import ProfileLoginForm from './components/profiles/ProfileLoginForm';
@@ -26,12 +27,13 @@ import ManageProfiles from './pages/profile/ManageProfiles';
 
 
 ReactDOM.render(
+    //<AddSong/>
     // <App />
 
     // Accounts
 
     // Pages
-     <RegistrationPage />
+    // <RegistrationPage />
 
     // Components
     // <GetStartedForm />
