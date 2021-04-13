@@ -6,3 +6,7 @@
 .bg-white{
   cursor: default;
 }
+
+.btn-danger {
+  background-color: red;
+}

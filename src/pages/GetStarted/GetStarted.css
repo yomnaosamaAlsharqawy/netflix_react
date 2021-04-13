@@ -23,14 +23,10 @@
     margin-bottom: 10%;
 }
 
-.getStartedNav h1{
-    color: red;
-    margin: 0.75em 1.5em;
-}
+
 .getStartedNavButton{
     padding: 0.5em 1em 0.75em 1em;
     border-radius: 5px;
-    background-color: red;
     margin: 0.5em 3em;
     color: white;
 }
@@ -51,11 +47,6 @@
 }
 .getStartedHeroText h2{
     font-size: 4.5em;
-}
-
-.getStartedForm{
-    color: white;
-    margin: auto;
 }
 
 .getStartedSecondContainer{

@@ -10,7 +10,7 @@ const accountApi = {
     };
     const res = await fetch(APIURL + "user-check/", requestOptions);
     const data = await res.json();
-    return data;
+    return [data, res.status];
   },
   accountDetails: async function (id) {
     const res = await fetch(APIURL + `${id}/`);
@@ -64,7 +64,12 @@ const accountApi = {
     const res = await fetch(APIURL + "register/step3/", requestOptions);
     const data = await res.json();
     return [data, res.status];
-  }
+  },
+  getPlans: async function () {
+    const res = await fetch(APIURL + "plans/");
+    const data = await res.json();
+    return data;
+  },
 };
 
 export default accountApi;
