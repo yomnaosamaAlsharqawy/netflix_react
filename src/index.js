@@ -25,9 +25,11 @@ import EditProfile from './pages/profile/EditProfilePage/EditProfile';
 import ManageProfiles from './pages/profile/ManageProfilesPage/ManageProfiles';
 import ProfileLogin from './pages/profile/ProfileLoginPage/ProfileLogin';
 
+// Payment
+import Stripe from './components/Stripe/Stripe'
 
 ReactDOM.render(
-    <App />
+    //<App />
 
     // Accounts
 
@@ -57,6 +59,10 @@ ReactDOM.render(
     // <CreateProfile />
     // <UpdateProfile />
 
+
+    /*** Payments ***/
+
+    <Stripe />
 
 ,document.getElementById('root')
 );
