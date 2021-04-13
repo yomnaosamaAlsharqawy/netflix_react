@@ -24,14 +24,6 @@
 }
 
 
-.getStartedNavButton{
-    padding: 0.5em 1em 0.75em 1em;
-    border-radius: 5px;
-    margin: 0.5em 3em;
-    color: white;
-}
-
-
 .getStartedHeroText{
     text-align: center;
     color: white;

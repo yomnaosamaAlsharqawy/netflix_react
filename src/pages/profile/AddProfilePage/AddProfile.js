@@ -2,21 +2,22 @@ import './AddProfile.css'
 import { useState } from "react";
 import { useInput } from "../../../hooks/useInput";
 import profileApi from "../../../api/profile";
+import {useHistory} from "react-router-dom";
 
 
-const ACCOUNT_ID = 2
 
 function AddProfile (){
-
+    const account = JSON.parse(localStorage.getItem("account"));
     const [nameProps, resetName] = useInput("");
     const [nameError, setNameError] = useState(null);
-  
+    const History = useHistory(); 
+
     const handleSubmit = async (e) => {
       e.preventDefault();
 
       const profileData = {
         name: nameProps.value,
-        account_id: ACCOUNT_ID,
+        account_id: account.id,
         pin_code: "",
         image_id: 1
       };
@@ -28,7 +29,8 @@ function AddProfile (){
         console.log("profile name error")
       }
       else if (status == 201) {
-          console.log("Created", response)  //Profile created -> route
+          console.log("Created", response);  //Profile created -> route
+          History.push("/profiles/view");
       }
       else {
           console.log("Unknown error", response, status)

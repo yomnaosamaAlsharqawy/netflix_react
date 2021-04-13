@@ -21,7 +21,7 @@ import ManageProfiles from "./pages/profile/ManageProfilesPage/ManageProfiles";
 
 // Stripe
 
-import Stripe from './components/Stripe/Stripe'
+// import Stripe from './components/Stripe/Stripe'
 
 export default function AppRouter() {
   return (
@@ -32,7 +32,7 @@ export default function AppRouter() {
         <Route path="/login" component={Login} />
         <Route path="/signup/regform" component={RegisterEmailPassword} />
         <Route path="/signup/planform" component={RegisterPlan} />
-        <Route path="/signup/payment" component={Stripe} />
+        <Route path="/signup/payment" component={RegisterPayment} />
         <Route path="/signup/phonenumber" component={RegisterPhoneNumber} />
         <Route path="/signup" component={Registration} />
 

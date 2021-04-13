@@ -75,6 +75,12 @@ export default function CheckoutForm() {
   return (
     <form className='form' id="payment-form" onSubmit={handleSubmit}>
       <CardElement id="card-element" options={cardStyle} onChange={handleChange} />
+      {/* Show any error that happens when processing the payment */}
+      {error && (
+        <div className="card-error small text-danger" role="alert">
+          {error}
+        </div>
+      )}
       <button
         disabled={processing || disabled || succeeded}
         id="submit"
@@ -87,12 +93,7 @@ export default function CheckoutForm() {
           )}
         </span>
       </button>
-      {/* Show any error that happens when processing the payment */}
-      {error && (
-        <div className="card-error" role="alert">
-          {error}
-        </div>
-      )}
+      
       {/* Show a success message upon completion */}
       <p className={succeeded ? "result-message" : "result-message hidden"}>
         Payment succeeded, see the result in your

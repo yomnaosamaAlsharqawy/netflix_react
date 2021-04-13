@@ -4,17 +4,24 @@ import GetStartedForm from "../../components/accounts/GetStartedForm";
 import { useHistory, Link } from "react-router-dom";
 
 export default function GetStarted() {
-	const History = useHistory();
+  const History = useHistory();
   return (
     <div className="getStartedPage">
       <div className="getStartedHero">
         <div className="getStartedNav">
-					
-				<Link style={{ width: "10%" }} to="/">
-          <img className="m-4" alt="" src="/logo.svg" />
-        </Link>
       
-					<Link className="text-decoration-none" to="/login"><button style={{fontSize: "1.2em"}} className="getStartedNavButton btn btn-danger">Sign In</button></Link>
+          <Link style={{ width: "10%" }} to="/">
+            <img className="m-4" alt="" src="/logo.svg" />
+          </Link>
+          
+          <Link className="text-decoration-none mr-4" to="/login">
+            <button
+              style={{ fontSize: "1.2em" }}
+              className="getStartedNavButton btn btn-danger text-white"
+            >
+              Sign In
+            </button>
+          </Link>
         </div>
         <div className="getStartedHeroText">
           <h1>Unlimited movies, TV shows, and more.</h1>

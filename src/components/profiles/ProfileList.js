@@ -1,10 +1,11 @@
 import "./ProfileList.css";
 import profileApi from "../../api/profile";
 import { ProfileCard } from "./ProfileCard";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 function ProfileList(props) {
+  const History = useHistory();
   const [profileList, setProfileList] = useState([]);
 
   useEffect(async () => {
@@ -12,19 +13,25 @@ function ProfileList(props) {
     setProfileList(profileData);
   }, []);
 
-  // const handleProfileClick = (event) => {
-  //   const profileId = event.target.dataset.id  // set this to context
-
-  //   // handle routing
-  //   return false
-  // }
+  const handleProfileClick = (profileId) => {
+    if (props.editMode) {
+      console.log('hi')
+      localStorage.setItem("profileId", profileId);
+      // handle routing
+      History.push("/profiles/edit");
+    } else {
+      // Route to Profile Browse Page               <====== Resources Gate
+      console.log('get me to my movies')
+      // History.push('/browse')
+    }
+  };
 
   return (
     <div className="profile-list">
       {profileList.map((profile) => (
         <ProfileCard
-          //onClick={handleProfileClick}
-          data-id={profile.id}
+          handleProfileClick={handleProfileClick}
+          id={profile.id}
           key={profile.id}
           profile={profile}
           editMode={props.editMode}

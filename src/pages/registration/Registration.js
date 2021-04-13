@@ -15,6 +15,8 @@ export default function Registration() {
         return <Step2 />;
       case 3:
         return <Step3 />;
+      default:
+        return <h1>No Match!</h1>;
     }
   };
 

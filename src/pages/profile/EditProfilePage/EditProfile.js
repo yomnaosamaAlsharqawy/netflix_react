@@ -1,10 +1,11 @@
-import './EditProfile.css'
-import { useState, useEffect } from 'react'
+import './EditProfile.css';
+import { useState, useEffect } from 'react';
 import { useInput } from "../../../hooks/useInput";
-import profileApi from '../../../api/profile'
-
+import profileApi from '../../../api/profile';
+import { useHistory } from 'react-router-dom';
 
 function EditProfile (){
+    const History = useHistory();
 
     const defaultProfile = {
         name: "Default",
@@ -54,6 +55,7 @@ function EditProfile (){
         }
         else if (status == 200) {
             console.log("Updated", response)  //Profile created -> route
+            History.push("/profiles/manage")
         }
         else {
             console.log("Unknown error", response, status)

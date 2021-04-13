@@ -50,7 +50,7 @@ export default function Layout({children}) {
               key={i}
               href="#"
               className="mt-2 col-6 col-md-3 col-lg-3 text-muted text-nowrap"
-            >
+              style={{fontSize: ".7em"}}>
               {elm}
             </a>
           ))}
