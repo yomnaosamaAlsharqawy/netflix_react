@@ -15,7 +15,6 @@ function ProfileList(props) {
 
   const handleProfileClick = (profileId) => {
     if (props.editMode) {
-      console.log('hi')
       localStorage.setItem("profileId", profileId);
       // handle routing
       History.push("/profiles/edit");

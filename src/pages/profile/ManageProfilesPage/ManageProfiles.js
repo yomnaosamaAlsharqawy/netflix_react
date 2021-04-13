@@ -9,10 +9,9 @@ function ManageProfile() {
 
   const handleDone = () => {
     if (editMode) {
-    seteditMode(false);
-  } else {
-    History.push("/profiles/view")
-  }
+      seteditMode(false);
+      History.push("/profiles/view")
+    }
   };
 
   return (

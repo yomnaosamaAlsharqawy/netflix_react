@@ -1,5 +1,9 @@
-const PROFILE_ID = 1
-const ACCOUNT_ID = 2
+const profileId = localStorage.getItem("profileId");
+const acc = localStorage.getItem("account");
+const account = acc ? JSON.parse(acc) : null;
+
+const PROFILE_ID = profileId ? profileId : "";
+const ACCOUNT_ID = account ? account.id : "";
 
 const BASE_URL = "http://localhost:8000/"
 const PROFILES_BASE_URL = "api/accounts/profiles/"
