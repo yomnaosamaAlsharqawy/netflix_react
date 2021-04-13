@@ -11,6 +11,7 @@ function ManageProfile() {
     if (editMode) {
       seteditMode(false);
       History.push("/profiles/view")
+      window.location.reload();
     }
   };
 

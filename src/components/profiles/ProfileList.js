@@ -28,6 +28,7 @@ function ProfileList(props) {
 
       // handle routing
       History.push(`/profiles/edit`);
+      window.location.reload();
     } else {
       // Route to Profile Browse Page               <====== Resources Gate
       console.log('get me to my movies')

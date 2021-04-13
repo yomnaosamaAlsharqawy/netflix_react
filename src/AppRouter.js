@@ -18,6 +18,7 @@ import AddProfile from "./pages/profile/AddProfilePage/AddProfile";
 import EditProfile from "./pages/profile/EditProfilePage/EditProfile";
 import ManageProfiles from "./pages/profile/ManageProfilesPage/ManageProfiles";
 import ProfileLogin from "./pages/profile/ProfileLoginPage/ProfileLogin";
+import Layout from "./pages/profile/Layout";
 
 // Stripe
 
@@ -28,20 +29,44 @@ export default function AppRouter() {
     <Router>
       <Switch>
         {/* Accounts */}
-        <Route path="/" exact component={GetStarted} />
-        <Route path="/login" component={Login} />
-        <Route path="/signup/regform" component={RegisterEmailPassword} />
-        <Route path="/signup/planform" component={RegisterPlan} />
-        <Route path="/signup/payment" component={RegisterPayment} />
-        <Route path="/signup/phonenumber" component={RegisterPhoneNumber} />
-        <Route path="/signup" component={Registration} />
+        <Route path="/" exact>
+          <GetStarted />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/signup/regform">
+          <RegisterEmailPassword />
+        </Route>
+        <Route path="/signup/planform">
+          <RegisterPlan />
+        </Route>
+        <Route path="/signup/payment">
+          <RegisterPayment />
+        </Route>
+        <Route path="/signup/phonenumber">
+          <RegisterPhoneNumber />
+        </Route>
+        <Route path="/signup">
+          <Registration />
+        </Route>
 
         {/* Profiles */}
-        <Route path="/profiles/login" component={ProfileLogin} />
-        <Route path="/profiles/view" component={ViewProfiles} />
-        <Route path="/profiles/add" component={AddProfile} />
-        <Route path="/profiles/manage" component={ManageProfiles} />
-        <Route path="/profiles/edit" component={EditProfile} />
+        <Route path="/profiles/login">
+          <ProfileLogin />
+        </Route>
+        <Route path="/profiles/view">
+          <ViewProfiles />
+        </Route>
+        <Route path="/profiles/add">
+          <AddProfile />
+        </Route>
+        <Route path="/profiles/manage">
+            <ManageProfiles />
+        </Route>
+        <Route path="/profiles/edit">
+            <EditProfile />
+        </Route>
 
         {/* Resources */}
       </Switch>
