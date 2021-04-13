@@ -21,8 +21,21 @@ import ProfileLogin from "./pages/profile/ProfileLoginPage/ProfileLogin";
 import Layout from "./pages/profile/Layout";
 
 // Stripe
-
 // import Stripe from './components/Stripe/Stripe'
+
+// Resources Pages
+// import Movies from './components/Movies/Movies'
+// import TvShows from './components/Tv-shows/Tv-shows'
+// import Video from './components/video/video';
+// import MoreInfo from './components/moreInfo/moreInfo';
+// import Home from './components/Home/Home'
+// import MyList from './components/MyList/MyList';
+
+import Movies from './components/Movies/Movies';
+import TvShows from './components/Tv-shows/Tv-shows'
+import Home from './components/Home/Home';
+import MyList from './components/MyList/MyList';
+
 
 export default function AppRouter() {
   return (
@@ -69,6 +82,24 @@ export default function AppRouter() {
         </Route>
 
         {/* Resources */}
+        <Route path="/list">
+          <MyList />
+        </Route>
+        <Route path="/Movies">
+          <Movies />
+        </Route>
+        <Route path="/tvshows">
+          <TvShows />
+        </Route>
+        {/* <Route path="/video">
+          <Video />
+        </Route> */}
+        {/* <Route path="/moreInfo">
+          <MoreInfo/>
+        </Route> */}
+        <Route path="/home">
+          <Home/>
+        </Route>
       </Switch>
     </Router>
   );

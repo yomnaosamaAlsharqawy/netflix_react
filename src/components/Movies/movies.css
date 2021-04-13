@@ -1,0 +1,134 @@
+
+body{
+    overflow-x: hidden;
+}
+
+.bigPosterContainer{
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+}
+
+.m-cont{
+    overflow: hidden;
+}
+
+.heroImg{
+     background-image: url('https://occ-0-3310-56.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABUt5GURSz5wfep8GhvVQfAHT35qOv0MhHmRBWus1SnJqeQ4hQ1SUN2aLsDiUmDNrRA57M1o8ntf4pDqDyZepWO95cFyM.webp?r=c3f'); 
+    object-fit: contain;
+    }
+
+.heroVideo{
+    background-image: url('https://images-na.ssl-images-amazon.com/images/I/71ArmO8FMDL._SL1500_.jpg');
+} 
+
+
+.heroContent{
+    display: flex;
+    flex-direction: column;
+    margin: 4em 0 0 4%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    z-index: 2;
+}
+
+.movieTitle{
+    font-size: 5.5em;
+    font-weight: bolder;
+    margin-bottom: 0;
+    line-height: 0.9em;
+    width: 20%;
+    color: white;
+}
+
+.heroParagraph{
+    font-size: 1.3em;
+    width: 50%;
+    color: white;
+}
+
+.heroButtonContainer{
+    display: flex;
+}
+
+.heroButton1{
+    padding: 0.65em 1.5em 0.65em 1.5em;
+    color: black;
+    background-color: white;
+    border-radius: 0.2em;
+    font-weight: bold;
+    margin-right: 0.75em;
+}
+
+.heroButton1:hover{
+    background-color: rgba(255,255,255,0.8);
+}
+
+.heroButton2{
+    padding: 0.65em 1.5em 0.65em 1.5em;
+    color: white;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 0.2em;
+    font-weight: bold;
+}
+
+.heroButton2:hover{
+    background-color: rgba(255,255,255,0.2);
+}
+
+
+@media  screen and (min-device-width: 365px) and (max-device-width: 375px) {
+    .heroContent{
+        display: flex;
+        flex-direction: column;
+        margin: 4em 0 0 5%;
+        color: white;
+        font-size: 12px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .movieTitle{
+        margin-bottom: 0;
+        width: auto;
+        font-size: 3rem;
+    }
+    
+      
+}
+
+
+@media  screen and (min-device-width: 360px) and (max-device-width: 364px) {
+    .heroContent{
+        display: flex;
+        flex-direction: column;
+        margin: 4em 0 0 5%;
+        color: white;
+        font-size: 12px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .movieTitle{
+        margin-bottom: 0;
+        width: auto;
+        font-size: 3rem;
+    }    
+}
+
+
+h4{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+
+.show{
+
+    display: block;
+    height: auto;
+}
+
+.hide{
+    display: none;
+}
