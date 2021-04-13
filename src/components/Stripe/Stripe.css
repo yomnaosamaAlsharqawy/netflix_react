@@ -19,7 +19,7 @@
     border-radius: 7px;
     padding: 40px;
   }
-  input {
+  input .InputElement {
     border-radius: 6px;
     margin-bottom: 6px;
     padding: 12px;

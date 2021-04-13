@@ -40,7 +40,7 @@
     color: #ffffff;
 }
 
-input {
+input .add-profile-input {
     outline: none;
     border-style: none;
     height: 100%;

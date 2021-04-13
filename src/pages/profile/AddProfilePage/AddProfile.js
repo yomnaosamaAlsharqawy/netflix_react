@@ -52,7 +52,7 @@ function AddProfile (){
                     
                     <div className="mt-4 mb-4">
                         <span><img className="default-image" src="https://ia801509.us.archive.org/20/items/profiles_202104/default.png"></img></span>
-                        <div className="name-input ml-5"><input placeholder="Name" type="text" {...nameProps}></input></div>
+                        <div className="name-input ml-5"><input className="add-profile-input" placeholder="Name" type="text" {...nameProps}></input></div>
                     </div>
 
                     <hr className="line" />

@@ -1,5 +1,7 @@
-body {
+.profile-body {
     background-color: #141414;
+    height: 100vh;
+    width: 100vw;
 }
 
 .view-profiles-container {
