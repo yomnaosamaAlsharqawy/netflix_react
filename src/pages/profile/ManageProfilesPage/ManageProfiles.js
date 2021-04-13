@@ -16,7 +16,7 @@ function ManageProfile() {
   };
 
   return (
-    <div className="profile-body">
+    <div className="manage-profile-body">
       <div className="manage-profiles-container">
         <h1 className="question">Manage Profiles:</h1>
         <ProfileList

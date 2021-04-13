@@ -39,7 +39,7 @@ function AddProfile (){
     };
 
     return (
-        <div className="profile-body">
+        <div className="add-profile-body">
             <div className="add-profiles-container">
                 <div className="profiles-sub-container">
                     <h1 className="title">Add Profile</h1>

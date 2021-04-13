@@ -76,7 +76,7 @@ function EditProfile (){
     }
 
     return (
-        <div className="profile-body">
+        <div className="edit-profile-body">
             <div className="edit-container">
                 <div className="">
 

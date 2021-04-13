@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 function ViewProfiles() {
   const History = useHistory();
   return (
-    <div className="profile-body">
+    <div className="view-profiles-body">
       <div className="view-profiles-container">
         <h1 className="question">Who's watching?</h1>
         <ProfileList className="profile-list" />

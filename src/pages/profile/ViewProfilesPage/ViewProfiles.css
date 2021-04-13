@@ -1,7 +1,10 @@
-.profile-body {
+.view-profiles-body {
     background-color: #141414;
     height: 100vh;
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .view-profiles-container {

@@ -1,5 +1,10 @@
-.profile-body {
+.edit-profile-body {
     background-color: #141414;
+    height: 130vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .edit-container {
