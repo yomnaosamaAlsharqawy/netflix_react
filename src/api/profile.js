@@ -83,7 +83,7 @@ const profileApi = {
         
         const res = await fetch(URL, requestOptions);
         const data = await res.json();
-        return data;
+        return [data, res.status];
     },
 
     updateProfile: async function (profile){

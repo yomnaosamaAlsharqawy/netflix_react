@@ -31,6 +31,7 @@ function AddProfile (){
       else if (status == 201) {
           console.log("Created", response);  //Profile created -> route
           History.push("/profiles/view");
+          window.location.reload();
       }
       else {
           console.log("Unknown error", response, status)

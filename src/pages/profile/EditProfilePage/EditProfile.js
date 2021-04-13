@@ -30,9 +30,9 @@ function EditProfile (){
         setimages(imageArray)
 
         const profileObj = await profileApi.getOneProfile()
-        setoldProfile(profileObj)
-        setcurrentProfile(profileObj)
-        setcurrentName(profileObj.name)
+        setoldProfile(profileObj[0])
+        setcurrentProfile(profileObj[0])
+        setcurrentName(profileObj[0].name)
     }, [])
 
     const handleSubmit = async (e) => {
@@ -75,6 +75,7 @@ function EditProfile (){
 
         if (status == 204) {
             console.log("Deleted", status)
+            History.push("/profiles/manage")
         }
         else {
             console.log("Unknown error", status)

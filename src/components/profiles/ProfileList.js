@@ -23,8 +23,18 @@ function ProfileList(props) {
     
     if (props.editMode) {
       localStorage.setItem("profileId", profileId);
-      const profileObj = await profileApi.getOneProfile()
-      localStorage.setItem("profile", JSON.stringify(profileObj))
+      const [profileObj, status] = await profileApi.getOneProfile()
+      console.log(status)
+      if (status === 404){
+        console.log("profile not found")
+      }
+      else if (status === 200) {
+        localStorage.setItem("profile", JSON.stringify(profileObj))
+      }
+      else {
+        console.log("Unknown error")
+      }
+      
 
       // handle routing
       History.push(`/profiles/edit`);
