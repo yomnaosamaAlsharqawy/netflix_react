@@ -19,7 +19,7 @@ const profileApi = {
             },
             body: JSON.stringify(profile)
         };
-        const res = await fetch(BASE_URL+PROFILES_BASE_URL+`/${PROFILE_ID}/login/`, requestOptions);
+        const res = await fetch(BASE_URL+PROFILES_BASE_URL+`${PROFILE_ID}/login/`, requestOptions);
         const data = await res.json();
         return data;
     },

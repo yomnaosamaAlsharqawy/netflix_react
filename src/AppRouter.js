@@ -17,7 +17,7 @@ import ViewProfiles from "./pages/profile/ViewProfilesPage/ViewProfiles";
 import AddProfile from "./pages/profile/AddProfilePage/AddProfile";
 import EditProfile from "./pages/profile/EditProfilePage/EditProfile";
 import ManageProfiles from "./pages/profile/ManageProfilesPage/ManageProfiles";
-// import ProfileLogin from '../profile/ProfileLoginPage/ProfileLogin';
+import ProfileLogin from "./pages/profile/ProfileLoginPage/ProfileLogin";
 
 // Stripe
 
@@ -37,6 +37,7 @@ export default function AppRouter() {
         <Route path="/signup" component={Registration} />
 
         {/* Profiles */}
+        <Route path="/profiles/login" component={ProfileLogin} />
         <Route path="/profiles/view" component={ViewProfiles} />
         <Route path="/profiles/add" component={AddProfile} />
         <Route path="/profiles/manage" component={ManageProfiles} />
