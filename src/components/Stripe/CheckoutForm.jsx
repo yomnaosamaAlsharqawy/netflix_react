@@ -14,7 +14,21 @@ export default function CheckoutForm() {
   const [clientSecret, setClientSecret] = useState('');
   const stripe = useStripe();
   const elements = useElements();
+
+  const plan_prices = {
+    1: 120,
+    2: 165,
+    3: 200, 
+  }
+
   useEffect(() => {
+
+    const acc = localStorage.getItem("account");
+    const account = acc ? JSON.parse(acc) : null;
+
+    const id = account ? account.id : "";
+    const user_plan_id = account ? account.plan_id : 0;
+
     // Create PaymentIntent as soon as the page loads
     window
       .fetch("http://localhost:8000/api/payment/checkout/", {
@@ -22,7 +36,7 @@ export default function CheckoutForm() {
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({amount: 500, account_id: 4})
+        body: JSON.stringify({amount: plan_prices[user_plan_id], account_id: id})
       })
       .then(res => {
         return res.json();
