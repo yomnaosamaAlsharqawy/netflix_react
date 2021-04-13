@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from 'react-router-dom';
 import {
   CardElement,
   useStripe,
   useElements
 } from "@stripe/react-stripe-js";
 export default function CheckoutForm() {
+  const History = useHistory()
   const [succeeded, setSucceeded] = useState(false);
   const [error, setError] = useState(null);
   const [processing, setProcessing] = useState('');
@@ -15,12 +17,12 @@ export default function CheckoutForm() {
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
     window
-      .fetch("/create-payment-intent", {
+      .fetch("http://localhost:8000/api/payment/checkout/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({items: [{ id: "xl-tshirt" }]})
+        body: JSON.stringify({amount: 500, account_id: 4})
       })
       .then(res => {
         return res.json();
@@ -67,6 +69,7 @@ export default function CheckoutForm() {
       setError(null);
       setProcessing(false);
       setSucceeded(true);
+      History.push("/signup/phonenumber")
     }
   };
   return (

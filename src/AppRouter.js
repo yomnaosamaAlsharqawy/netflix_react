@@ -33,7 +33,7 @@ export default function AppRouter() {
         <Route path="/signup/regform" component={RegisterEmailPassword} />
         <Route path="/signup/planform" component={RegisterPlan} />
         <Route path="/signup/payment" component={Stripe} />
-        <Route path="/signup/otpPhoneEntry" component={RegisterPhoneNumber} />
+        <Route path="/signup/phonenumber" component={RegisterPhoneNumber} />
         <Route path="/signup" component={Registration} />
 
         {/* Profiles */}
