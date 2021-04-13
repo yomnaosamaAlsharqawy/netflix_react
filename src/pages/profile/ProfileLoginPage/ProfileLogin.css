@@ -36,7 +36,8 @@
 }
 
 .profile-login-error {
-    font-size: 2em;
+    font-size: 1.7em;
+    margin-bottom: 0.7em;
 }
 
 .start-watching-button {

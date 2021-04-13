@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import './ProfileCard.css'
 
-export const ProfileCard = ({profile, editMode, handleProfileClick, id}) => {
+export const ProfileCard = ({profile, editMode, handleProfileClick, id, profileHasLock}) => {
 
   return (
     <div onClick={() => {handleProfileClick(id)}}>
@@ -18,7 +18,8 @@ export const ProfileCard = ({profile, editMode, handleProfileClick, id}) => {
 
         <div className="profile-details">
           <div className="profile-name mt-2">{profile.name}</div>
-          <div className="profile-lock fa fa-lock mt-2"></div>
+          {profileHasLock && <div className="profile-lock fa fa-lock mt-2"></div> || <div className="filler">0</div>}
+
         </div>
       </div>
 

@@ -23,7 +23,7 @@ function ProfileLogin (){
         console.log(response.message)
       } else {
         console.log(response.message)
-        setPincodeError("Pin code is not correct");
+        setPincodeError("Pin code is not correct.");
       }
     };
 
