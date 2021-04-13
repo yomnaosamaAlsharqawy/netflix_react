@@ -2,22 +2,32 @@ import { useState } from "react";
 import { useInput } from "../../hooks/useInput";
 import accountApi from "../../api/account";
 import { Row, Col, Form, Button } from "react-bootstrap";
+import {useHistory} from "react-router-dom";
 
 function RegistrationForm() {
   const [countryCodeProps, resetCoutnryCode] = useInput("EG");
   const [phoneNumberProps, resetPhoneNumber] = useInput("");
   const [phoneNumberError, setPhoneNumberError] = useState(null);
+  const History = useHistory()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const account = await JSON.parse(localStorage.getItem("account"));
     const [data, status] = await accountApi.registerPhoneNumber({
-      id: 1, // <-- from context
+      id: account.id,
       country_code: countryCodeProps.value,
       phone_number: phoneNumberProps.value,
     });
     console.log(data, status);
+
     if (status === 400 && data.phone_number) {
       setPhoneNumberError(data.phone_number);
+    }
+    if (status === 500) {
+      setPhoneNumberError("Invalid phone number")
+    }
+    if (status === 200) {
+      History.push('/profiles/add')
     }
   };
 

@@ -34,7 +34,7 @@ function GetStartedForm() {
       <Form.Row className="w-100 align-items-center">
         <Form.Group as={Col} xs="8" controlId="formBasicEmail">
           <Form.Control
-            style={{ height: "4em", fontSize: "1.5em", marginRight: "0" }}
+            style={{ height: "4em", fontSize: "1.5em", margin: "0" }}
             type="email"
             placeholder="Email Address"
             {...emailProps}
@@ -42,7 +42,7 @@ function GetStartedForm() {
         </Form.Group>
         <Form.Group as={Col} xs="4" style={{ marginLeft: "0" }}>
           <Button
-            style={{ height: "4em", fontSize: "1.5em", marginLeft: "0" }}
+            style={{ height: "4em", fontSize: "1.5em", margin: "0" }}
             className="w-100"
             variant="danger"
             type="submit"

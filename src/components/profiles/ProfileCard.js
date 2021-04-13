@@ -1,12 +1,12 @@
 import { useState } from "react";
 import './ProfileCard.css'
 
-export const ProfileCard = ({profile, editMode}) => {
+export const ProfileCard = ({profile, editMode, handleProfileClick, id}) => {
 
   return (
-    <div>
+    <div onClick={() => {handleProfileClick(id)}}>
       
-      <div className="profile-card">
+      <div className="profile-card"  >
         
         <div className="component-container">
           <a><img 
