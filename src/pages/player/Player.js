@@ -5,9 +5,6 @@ import Popper from "popper.js";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 export default function Player() {
-  // Get Id from local storage or useParams
-  const id = 1; // <======================= Requries your attention
-  const type = "movie"; // <======================= Requries your attention
 
   const [data, setData] = useState([]);
   const [play, setPlay] = useState(false);
@@ -23,9 +20,24 @@ export default function Player() {
   const seekbar = useRef();
   const volIcon = useRef();
 
+  const id = localStorage.getItem("id")
+  const type = localStorage.getItem("type")
+
+  const storedToken = localStorage.getItem("token")
+
   useEffect(() => {
+
+    const requestOptions = {
+      method: 'GET',
+      redirect: 'follow',
+      headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Token '+storedToken, 
+        }
+    };
+
     // Do the fetch
-    fetch(`http://localhost:8000/resources/moreinfo?id=${id}&type=${type}`)
+    fetch(`http://localhost:8000/resources/moreinfo?id=${id}&type=${type}`, requestOptions)
       .then((res) => res.json())
       .then(setData)
       .catch(console.log);
