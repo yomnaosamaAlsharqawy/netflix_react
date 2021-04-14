@@ -12,7 +12,7 @@ function Slider({movie,title}){
  
 function slidetoleft(e){
      if(count != offset ){    
-        count -=250
+        count -=750
         console.log(e.target.parentNode.previousElementSibling)
         let x = e.target.parentNode.previousElementSibling
         // x.style.transform = `translateX(${count}px)`
@@ -24,7 +24,7 @@ function slidetoleft(e){
 
 function slidetoright(e){
     if(count < 0){
-    count += 250
+    count += 750
     console.log(e.target.parentNode.previousElementSibling)
     let x = e.target.parentNode.previousElementSibling
     //  x.style.transform = `translateX(${count}px)`
@@ -66,8 +66,8 @@ function hidearrow2(e){
            
         </div>
         <div className="control">
-            <div onClick={slidetoleft} onMouseEnter={hidearrow1} onMouseLeave={showarrow1}  className={movie.length < 8 ? `hide-button`:`show-button`} id="back"><FontAwesomeIcon icon={faArrowLeft} /></div>
-            <div onClick={slidetoright} onMouseEnter={hidearrow2} onMouseLeave={showarrow2} className={movie.length < 8 ? `hide-button`:`show-button`} id= "forward" ><FontAwesomeIcon icon={faArrowRight}  /></div>
+            <div onClick={slidetoright} onMouseEnter={hidearrow1} onMouseLeave={showarrow1}  className={movie.length < 8 ? `hide-button`:`show-button`} id="back"><FontAwesomeIcon icon={faArrowLeft} /></div>
+            <div onClick={slidetoleft} onMouseEnter={hidearrow2} onMouseLeave={showarrow2} className={movie.length < 8 ? `hide-button`:`show-button`} id= "forward" ><FontAwesomeIcon icon={faArrowRight}  /></div>
         </div>
         </div>
     );

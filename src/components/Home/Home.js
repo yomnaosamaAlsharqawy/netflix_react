@@ -104,7 +104,7 @@ function Home(){
                 <div className="heroContent">
                     <div className="movieTitle text-white"><p>Joker</p></div>
                     <div className="heroParagraph text-white">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A consequatur ut recusandae </p>
+                        <p>In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society.</p>
                     </div>
                     <div className="heroButtonContainer">
                        <Link to="/video" className="play"><div className='heroButton1'> <FontAwesomeIcon icon={faPlay} /> &nbsp; Play</div></Link>
