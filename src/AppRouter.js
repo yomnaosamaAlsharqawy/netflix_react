@@ -18,7 +18,10 @@ import AddProfile from "./pages/profile/AddProfilePage/AddProfile";
 import EditProfile from "./pages/profile/EditProfilePage/EditProfile";
 import ManageProfiles from "./pages/profile/ManageProfilesPage/ManageProfiles";
 import ProfileLogin from "./pages/profile/ProfileLoginPage/ProfileLogin";
-import Layout from "./pages/profile/Layout";
+
+
+// Player
+import Player from "./pages/player/Player";
 
 // Stripe
 // import Stripe from './components/Stripe/Stripe'
@@ -92,9 +95,9 @@ export default function AppRouter() {
         <Route path="/tvshows">
           <TvShows />
         </Route>
-        {/* <Route path="/video">
-          <Video />
-        </Route> */}
+        <Route path="/video">
+          <Player />
+        </Route>
         <Route path="/moreInfo">
           <MoreInfo/>
         </Route>
