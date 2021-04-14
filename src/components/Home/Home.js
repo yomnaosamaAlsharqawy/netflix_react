@@ -21,6 +21,8 @@ function Home(){
     const [seriegenresfilter, setseriegenresfilter] = useState([])
     const [seriegenrestile, setseriegenrestitle] = useState([])
     const [flag, setflag] = useState(true)
+
+    const storedToken = localStorage.getItem("token")
     
     const handleHeroHover = () => {
        setTimeout(() => {
@@ -36,7 +38,11 @@ function Home(){
     function search(e){
         var requestOptions = {
             method: 'GET',
-            redirect: 'follow'
+            redirect: 'follow',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Token '+storedToken, 
+              }
           };
           
           fetch(`http://localhost:8000/resources/search?name=${e.target.value}`, requestOptions)
@@ -48,13 +54,20 @@ function Home(){
     }
 
 
-    useEffect( async () => {
-        var requestOptions = {
-            method: 'GET',
-            redirect: 'follow'
-              };
-          
-          fetch("http://localhost:8000/resources/tv_show", requestOptions)
+    useEffect(() => {
+
+        const getData = () => {
+
+            var requestOptions = {
+                method: 'GET',
+                redirect: 'follow', 
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Token '+storedToken, 
+                  }
+            };
+              
+            fetch("http://localhost:8000/resources/tv_show", requestOptions)
             .then(response => response.json())
             .then(result =>setserieList1(result))
             .catch(error => console.log('error', error));
@@ -78,6 +91,10 @@ function Home(){
             .then(response => response.json())
             .then(result => setserieList5(result))
             .catch(error => console.log('error', error));
+            }
+
+            getData();
+
         }, [])
     
         return (
@@ -85,7 +102,7 @@ function Home(){
             <div onMouseEnter={handleHeroHover} onMouseLeave={handleHeroLeave} className={`bigPosterContainer wallpaperImg` }>
                 <Main search={search} /> 
                 <div className="heroContent">
-                    <div className="movieTitle text-white"><img src="https://occ-0-4609-784.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABYqvx3erH7dofSWwOXpbidBHsrBXla1F9-BTuUQmWpPFS0Wi_TUj6AiFBTFqs3sNjkmooN0BPHfuULQk7bsaPYSgSOYzOUlrHY8q.webp?r=103"/></div>
+                    <div className="movieTitle text-white"><p>Joker</p></div>
                     <div className="heroParagraph text-white">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A consequatur ut recusandae </p>
                     </div>

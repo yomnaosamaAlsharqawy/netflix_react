@@ -9,11 +9,18 @@ function  Genres (props){
 
     const [type,setType] = useState("") 
     const [genres,setGenre] = useState([]) 
+
+    const storedToken = localStorage.getItem("token")
+
     useEffect(()=>{
         setType(props.type)
         var requestOptions = {
             method: 'GET',
-            redirect: 'follow'
+            redirect: 'follow',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Token '+storedToken, 
+              }
           };
           
           fetch("http://localhost:8000/resources/genres", requestOptions)

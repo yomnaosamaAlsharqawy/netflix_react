@@ -20,6 +20,8 @@ function TvShows(){
     const [seriegenresfilter, setseriegenresfilter] = useState([])
     const [seriegenrestile, setseriegenrestitle] = useState([])
     const [flag, setflag] = useState(true)
+
+    const storedToken = localStorage.getItem("token")
     
     const handleHeroHover = () => {
        setTimeout(() => {
@@ -30,7 +32,11 @@ function TvShows(){
     function search(e){
         var requestOptions = {
             method: 'GET',
-            redirect: 'follow'
+            redirect: 'follow',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Token '+storedToken, 
+              }
           };
           
           fetch(`http://localhost:8000/resources/search?name=${e.target.value}`, requestOptions)
@@ -44,7 +50,11 @@ function TvShows(){
     function genre_filter(e){
         var requestOptions = {
             method: 'GET',
-            redirect: 'follow'
+            redirect: 'follow',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Token '+storedToken, 
+              }
           };
           
           fetch(`http://localhost:8000/resources/filters?type=tvshow&option=genre&value=${e.target.text}`, requestOptions)
@@ -65,7 +75,11 @@ function TvShows(){
     useEffect( async () => {
         var requestOptions = {
             method: 'GET',
-            redirect: 'follow'
+            redirect: 'follow',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Token '+storedToken, 
+              }
               };
           
           fetch("http://localhost:8000/resources/tv_show", requestOptions)

@@ -18,6 +18,8 @@ const [seriegenresfilter, setseriegenresfilter] = useState([])
 const [seriegenrestile, setseriegenrestitle] = useState([])
 const [flag, setflag] = useState(true)
 
+const storedToken = localStorage.getItem("token")
+
 const handleHeroHover = () => {
    setTimeout(() => {
     setheroHovered(true)
@@ -27,7 +29,11 @@ const handleHeroHover = () => {
 function genre_filter(e){
     var requestOptions = {
         method: 'GET',
-        redirect: 'follow'
+        redirect: 'follow',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Token '+storedToken, 
+          }
       };
       
       fetch(`http://localhost:8000/resources/filters?type=movie&option=genre&value=${e.target.text}`, requestOptions)
@@ -43,7 +49,11 @@ function genre_filter(e){
 function search(e){
     var requestOptions = {
         method: 'GET',
-        redirect: 'follow'
+        redirect: 'follow',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Token '+storedToken, 
+          }
       };
       
       fetch(`http://localhost:8000/resources/search?name=${e.target.value}`, requestOptions)
@@ -61,7 +71,11 @@ const handleHeroLeave = () => {
 useEffect( async () => {
     var requestOptions = {
         method: 'GET',
-        redirect: 'follow'
+        redirect: 'follow',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Token '+storedToken, 
+          }
           };
       
       fetch("http://localhost:8000/resources/movie", requestOptions)

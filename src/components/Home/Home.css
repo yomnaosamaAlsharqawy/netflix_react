@@ -65,7 +65,7 @@
 }
 
 .wallpaperImg{
-    background-image: url('https://occ-0-4609-784.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABcbJ5IP8lpGtJawRIOKqZidbkQNg6g1TfSEv-GB2QkvcrPDChUAZ3s1vTf-2VYAhKokuK8V9iZNTwfTiu_9R06IHeAMI.webp?r=67b'); 
+    background-image: url('https://ia601400.us.archive.org/10/items/joker-2019-movie-joaquin-phoenix-movies-1666047/Joker_2019_Movie_Joaquin_Phoenix_movies-1666047.jpg'); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -83,11 +83,12 @@
 }
 
 .movieTitle{
-    font-size: 5.5em;
+    font-size: 10em;
     font-weight: bolder;
     margin-bottom: 0;
     line-height: 0.9em;
     width: 60%;
+    margin-top: 2em;
 
 }
 

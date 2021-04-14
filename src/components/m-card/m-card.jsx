@@ -11,6 +11,9 @@ function Mcard({movie,url,like}){
   const [updated,setUpdate] = useState("")
   const [show,setshow] = useState("")
 
+
+  const storedToken = localStorage.getItem("token")
+
   function addlikes(id){
     var formdata = new FormData();
     formdata.append("id",id);
@@ -20,7 +23,10 @@ function Mcard({movie,url,like}){
     var requestOptions = {
       method: 'POST',
       body: formdata,
-      redirect: 'follow'
+      redirect: 'follow',
+      headers: {
+        "token": "Token "+storedToken
+    }
     };
 
   fetch("http://localhost:8000/resources/likes", requestOptions)
@@ -39,7 +45,11 @@ function Mcard({movie,url,like}){
       var requestOptions = {
         method: 'POST',
         body: formdata,
-        redirect: 'follow'
+        redirect: 'follow',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Token '+storedToken, 
+        }
       };
 
       fetch("http://localhost:8000/resources/likes", requestOptions)
@@ -58,7 +68,11 @@ function Mcard({movie,url,like}){
     var requestOptions = {
       method: 'POST',
       body: formdata,
-      redirect: 'follow'
+      redirect: 'follow',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Token '+storedToken, 
+      }
   };
 
   fetch("http://localhost:8000/resources/views", requestOptions)
@@ -77,14 +91,26 @@ function Mcard({movie,url,like}){
     }
 
   function addtolist(){
-    var formdata = new FormData();
-    formdata.append("profile", "9");
-    formdata.append(movie.type, movie.id);
+    // var formdata = new FormData();
+
+    let profileId = localStorage.getItem("profileId")
+
+    // formdata.append("profile", Number(profileId));
+    // formdata.append("movie", movie.id);
+
+    const listData = {
+      "profile": Number(profileId),
+      "movie": movie.id
+    }
 
     var requestOptions = {
       method: 'POST',
-      body: formdata,
-      redirect: 'follow'
+      body: JSON.stringify(listData),
+      redirect: 'follow',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Token '+storedToken, 
+      }
     };
 
     fetch("http://localhost:8000/mylist/", requestOptions)
@@ -98,7 +124,7 @@ function Mcard({movie,url,like}){
         <div  className="poster-container indicator">
                 <div className="big-poster">
                   <div className="big-poster-img">
-                    <img src={movie.image} />
+                    <img src={typeof(movie.movie) == 'object' ? movie.movie.image : movie.image} />
                     <div class={"video-container"}>
                       <video width="100%" height="100%" poster="./images/img1.jpg">
                         <source src="./videoP.mp4" type="video/mp4"/>
@@ -118,13 +144,15 @@ function Mcard({movie,url,like}){
                       <Link to="/moreInfo" onClick={storeData}><FontAwesomeIcon icon={faChevronCircleDown} color={"white"} /></Link>
                     </div>
                     <div>
-                      <p>{movie.name}</p>
-                      <p>+{movie.age}</p>
-                      <p>{movie.time}h</p>
+                      <p>{typeof(movie.movie) == 'object' ? movie.movie.name : movie.name}</p>
+                      <p>+{typeof(movie.movie) == 'object' ? movie.movie.age : movie.age}</p>
+                      <p>{typeof(movie.movie) == 'object' ? movie.movie.time : movie.time}h</p>
                       </div>
                     <div>
                       <ul>
-                      {movie.moods.map((val,i)=> i<3 ? <li>{val.mood}</li>:"")}
+                      {typeof(movie.movie) == 'object' ?
+                        movie.movie.moods.map((val,i)=> i<3 ? <li>{val.mood}</li> : "") :
+                        movie.moods.map((val,i)=> i<3 ? <li>{val.mood}</li> : "")}
                       </ul>        
                     </div>
                   </div> 

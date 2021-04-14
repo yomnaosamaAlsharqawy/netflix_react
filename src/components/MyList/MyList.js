@@ -8,21 +8,32 @@ function MyList(){
 
     const [serieList1, setserieList1] = useState([])
     const [serieList2, setserieList2] = useState([])
+
+    const profileId = localStorage.getItem("profileId")
+    const storedToken = localStorage.getItem("token")
     
     useEffect( async () => {
         var requestOptions = {
             method: 'GET',
-            redirect: 'follow'
+            redirect: 'follow',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': 'Token '+storedToken, 
+            }
           };
           
-          fetch("http://localhost:8000/mylist?id=9", requestOptions)
+          fetch(`http://localhost:8000/mylist?id=${profileId}`, requestOptions)
             .then(response => response.json())
             .then(result => setserieList1(result))
             .catch(error => console.log('error', error));
 
             var requestOptions = {
                 method: 'GET',
-                redirect: 'follow'
+                redirect: 'follow',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': 'Token '+storedToken, 
+                }
               };
               
 

@@ -6,7 +6,7 @@ function Footer(){
         return (
              <div className="footer-container">
 
-                <span style={{width:"25%",fontSize:"1em",color:"white",fontFamily:"monospace"}}>© Copyright 1997-2021 Netflix ,inc </span>
+                <span style={{width:"25%",fontSize:"1em",color:"white",fontFamily:"monospace"}}>© Copyright 1997-2021 Netflix Egypt, inc. </span>
 
             </div>
     )

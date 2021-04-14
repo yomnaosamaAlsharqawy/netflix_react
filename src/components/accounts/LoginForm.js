@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useInput } from "../../hooks/useInput";
 import accountApi from "../../api/account";
 import { Form, Button } from "react-bootstrap";
+import { useHistory } from 'react-router-dom';
 
 // import AccountContext from "../../context/AccountContext";
 // import { useContext } from "react";
@@ -12,6 +13,7 @@ function LoginForm() {
   const [emailProps, resetEmail] = useInput(email);
   const [emailError, setEmailError] = useState(null);
   const [passwordProps, resetPassword] = useInput("");
+  const History = useHistory()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,6 +23,7 @@ function LoginForm() {
     });
     if (data.token) {
       localStorage.setItem("token", data.token);
+      History.push('/profiles/view');
     } else {
       setEmailError("Email or Password is not correct!");
     }

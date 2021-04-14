@@ -14,9 +14,6 @@ const handleExit = () => {
     sethovered(false)
 }
 
- 
-
-
     return (
             <div onMouseLeave={handleExit} onMouseEnter={handleHover} className="card-container">  
                 <div className='imageContainer'>

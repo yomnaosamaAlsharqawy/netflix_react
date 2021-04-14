@@ -1,0 +1,81 @@
+body{
+    background-color: #181818;
+    color: white;
+  }
+  
+  #match{
+    color: #44c965;
+  }
+  .season_menue1{
+    background-color: rgba(36,36,36);
+  }
+  .season_menue1 a{
+    color: #fff;
+  }
+  .info a{
+    color: #fff;
+    display: inline;
+  }
+  .info span{
+    color: rgb(139, 135, 135);
+    display: inline;
+  }
+  hr.light{
+    border-top: .5px solid #d5d5d5;
+  }
+  
+  /* hover icon on episode */
+  .fa-play-circle{
+    font-size:40px;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+  /*show more and show less buttons*/
+  .hr-btn-wrapper {
+    position: relative;
+  }
+  
+  .special-hr, .load-more-btn {
+    position: absolute;
+    top: 50%;
+  }
+  
+  .special-hr {
+    width: 100%;
+    background-color: #d5d5d5;
+  }
+  
+  .load-more-btn {
+    color: #d5d5d5;
+    left: 50%;
+    border-radius: 50%;
+    width: 3%;
+    border: 2px solid white;
+    background-color: #181818;
+  }
+  
+  .load-more-btn:hover{
+    background-color:#4b4646;
+  }
+  .c-bg-dark {
+    background-color: #181818;
+    color: white;
+  }
+  
+  .c-bg-dark:hover,
+  .c-bg-dark:focus {
+    background-color: rgb(54, 51, 51);
+    color: white;
+  }
+  
+  .btn-img-wrapper {
+    position: relative;
+  }
+  
+  
+  .c-bg-dark:hover .fa-play-circle {
+    display: block;
+  }

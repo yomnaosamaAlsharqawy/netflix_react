@@ -13,8 +13,8 @@ export default function Main({search}) {
     <Nav className="mr-auto">
       <Nav.Link  href="/home">Home</Nav.Link>
       <Nav.Link href="/movies">Movies</Nav.Link>
-      <Nav.Link href="/tvshows">Tv shows</Nav.Link>
-      <Nav.Link href="/list">My list</Nav.Link>
+      <Nav.Link href="/tvshows">TV Shows</Nav.Link>
+      <Nav.Link href="/list">My List</Nav.Link>
     </Nav>
     
     <Form inline>

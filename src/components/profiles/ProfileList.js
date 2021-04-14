@@ -24,7 +24,7 @@ function ProfileList(props) {
     if (props.editMode) {
       localStorage.setItem("profileId", profileId);
       const [profileObj, status] = await profileApi.getOneProfile()
-      console.log(status)
+      
       if (status === 404){
         console.log("profile not found")
       }
@@ -41,8 +41,19 @@ function ProfileList(props) {
       window.location.reload();
     } else {
       // Route to Profile Browse Page               <====== Resources Gate
-      console.log('get me to my movies')
-      // History.push('/browse')
+      localStorage.setItem("profileId", profileId);
+      const [profileObj, status] = await profileApi.getOneProfile()
+      
+      if (status === 404){
+        console.log("profile not found")
+      }
+      else if (status === 200) {
+        localStorage.setItem("profile", JSON.stringify(profileObj))
+      }
+      else {
+        console.log("Unknown error")
+      }
+      History.push('/home')
     }
   };
 

@@ -35,6 +35,7 @@ import Movies from './components/Movies/Movies';
 import TvShows from './components/Tv-shows/Tv-shows'
 import Home from './components/Home/Home';
 import MyList from './components/MyList/MyList';
+import MoreInfo from './components/moreinfo/MoreInfo'
 
 
 export default function AppRouter() {
@@ -94,9 +95,9 @@ export default function AppRouter() {
         {/* <Route path="/video">
           <Video />
         </Route> */}
-        {/* <Route path="/moreInfo">
+        <Route path="/moreInfo">
           <MoreInfo/>
-        </Route> */}
+        </Route>
         <Route path="/home">
           <Home/>
         </Route>
