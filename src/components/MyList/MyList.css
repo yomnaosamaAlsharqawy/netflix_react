@@ -1,4 +1,6 @@
 
-body{
+.mylist-body-container {
     overflow-x: hidden;
+    background-color: #141414;
+    height: 100vh;
 }

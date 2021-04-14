@@ -107,15 +107,15 @@ function Mcard({movie,url,like}){
                   </div>
                   <div className="big-poster-details">
                     <div >
-                      <Link to="/video">  <FontAwesomeIcon icon={faPlay} /></Link>
+                      <Link to="/video">  <FontAwesomeIcon icon={faPlay} color={"white"} /></Link>
                         
-                      <Link onClick={addtolist}><FontAwesomeIcon icon={faPlusCircle} /></Link>
+                      <Link onClick={addtolist}><FontAwesomeIcon icon={faPlusCircle} color={"white"} /></Link>
     
                       <Link onClick={()=>addlikes(movie.id)} ><FontAwesomeIcon color={updated=="like"?"blue":"white"} icon={faThumbsUp} /></Link> 
                     
                       <Link  onClick={()=>adddislikes(movie.id)}>  <FontAwesomeIcon color={updated=="dislike"?"blue":"white"}  icon={faThumbsDown} /> </Link>
                         
-                      <Link to="/moreInfo" onClick={storeData}><FontAwesomeIcon icon={faChevronCircleDown} /></Link>
+                      <Link to="/moreInfo" onClick={storeData}><FontAwesomeIcon icon={faChevronCircleDown} color={"white"} /></Link>
                     </div>
                     <div>
                       <p>{movie.name}</p>

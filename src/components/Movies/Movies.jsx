@@ -86,13 +86,13 @@ useEffect( async () => {
     }, [])
 
     return (
-        <div className="">
+        <div className="movies-body-container">
             <Main search = {search}  />  
             <Generes type="Movies"  filter = {genre_filter}/>
-        <div className={flag? `hide` :`show`}>
+        <div className={flag? `hide-movies-container` :`show-movies-container`}>
         <Slider movie = {seriegenresfilter} title={seriegenrestile}  />
         </div>
-        <div className={flag? `show` :`hide`}>
+        <div className={flag? `show-movies-container` :`hide-movies-container`}>
             <Slider movie = {movieList1} title="Movies" />
             <Slider movie = {movieList2} title="violent" />
             <Slider movie = {movieList3} title="romance" />

@@ -1,6 +1,6 @@
-
-body{
+.tvshows-body-container {
     overflow-x: hidden;
+    background-color: #141414;
 }
 .bigPosterContainer{
     flex-direction: column;
@@ -113,11 +113,11 @@ h4{
 }
 
 
-.show{
+.show-tvshow-container{
 
     display: block;
 }
 
-.hide{
+.hide-tvshow-container{
     display: none;
 }

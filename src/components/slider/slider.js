@@ -66,8 +66,8 @@ function hidearrow2(e){
            
         </div>
         <div className="control">
-            <div onClick={slidetoleft} onMouseEnter={hidearrow1} onMouseLeave={showarrow1}  className={movie.length < 6 ? `hide`:`show`} id="back"><FontAwesomeIcon icon={faArrowLeft} /></div>
-            <div onClick={slidetoright} onMouseEnter={hidearrow2} onMouseLeave={showarrow2} className={movie.length < 6 ? `hide`:`show`} id= "forward" ><FontAwesomeIcon icon={faArrowRight}  /></div>
+            <div onClick={slidetoleft} onMouseEnter={hidearrow1} onMouseLeave={showarrow1}  className={movie.length < 8 ? `hide-button`:`show-button`} id="back"><FontAwesomeIcon icon={faArrowLeft} /></div>
+            <div onClick={slidetoright} onMouseEnter={hidearrow2} onMouseLeave={showarrow2} className={movie.length < 8 ? `hide-button`:`show-button`} id= "forward" ><FontAwesomeIcon icon={faArrowRight}  /></div>
         </div>
         </div>
     );

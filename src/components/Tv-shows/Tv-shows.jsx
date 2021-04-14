@@ -90,13 +90,13 @@ function TvShows(){
         }, [])
     
         return (
-            <div>
+            <div className="tvshows-body-container">
             <Main search = {search} />
             <Generes type="Tv shows"  filter = {genre_filter}/>
-            <div className={flag? `hide` :`show`}>
+            <div className={flag? `hide-tvshow-container` :`show-tvshow-container`}>
         <Slider movie = {seriegenresfilter} title={seriegenrestile} />
         </div>
-        <div className={flag? `show` :`hide`}>
+        <div className={flag? `show-tvshow-container` :`hide-tvshow-container`}>
             <Slider movie = {serieList1} title="Tvshows" />
             <Slider movie = {serieList2} title="violent" />
             <Slider movie = {serieList3} title="romance" />

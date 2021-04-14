@@ -7,7 +7,7 @@ export default function Main({search}) {
 
     return (
   <Navbar bg="transparent" expand="lg">
-  <Navbar.Brand  href="#home"><img id="logo1"  src="https://logos-world.net/wp-content/uploads/2020/04/Netflix-Logo.png"/></Navbar.Brand>
+  <Navbar.Brand  href="#home"><img id="logo1"  src="/logo.svg"/></Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">

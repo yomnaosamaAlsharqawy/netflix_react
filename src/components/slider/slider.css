@@ -72,13 +72,13 @@
 
 }
 
-.show{
+.show-button{
 
     visibility: visible;
 }
 
 
-.hide{
+.hide-button{
 
     visibility: hidden;
 }

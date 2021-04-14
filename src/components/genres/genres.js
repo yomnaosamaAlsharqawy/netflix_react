@@ -29,7 +29,7 @@ function  Genres (props){
     return (
         <div className="genres_container row">
             <div className="s-t">
-            <div className="side-title col-sm-2" >{type}</div>
+            <div className="side-title" >{type}</div>
             </div>
             <div className="genres">
                 <div className="list-genres" onClick={displaylistbody}>Genres <span className="drop-icon"> 

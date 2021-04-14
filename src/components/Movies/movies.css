@@ -1,6 +1,6 @@
-
-body{
+.movies-body-container {
     overflow-x: hidden;
+    background-color: #141414;
 }
 
 .bigPosterContainer{
@@ -123,12 +123,12 @@ h4{
 }
 
 
-.show{
+.show-movies-container{
 
     display: block;
     height: auto;
 }
 
-.hide{
+.hide-movies-container{
     display: none;
 }

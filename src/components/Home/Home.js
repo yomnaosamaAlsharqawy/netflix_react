@@ -82,7 +82,7 @@ function Home(){
     
         return (
             <div className="home-body-container">
-            <div onMouseEnter={handleHeroHover} onMouseLeave={handleHeroLeave} className={`bigPosterContainer heroImg` }>
+            <div onMouseEnter={handleHeroHover} onMouseLeave={handleHeroLeave} className={`bigPosterContainer wallpaperImg` }>
                 <Main search={search} /> 
                 <div className="heroContent">
                     <div className="movieTitle text-white"><img src="https://occ-0-4609-784.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABYqvx3erH7dofSWwOXpbidBHsrBXla1F9-BTuUQmWpPFS0Wi_TUj6AiFBTFqs3sNjkmooN0BPHfuULQk7bsaPYSgSOYzOUlrHY8q.webp?r=103"/></div>
@@ -95,10 +95,10 @@ function Home(){
                     </div>
                 </div>
             </div>
-            <div className={flag? `hide` :`show`}>
+            <div className={flag? `hide-home-container` :`show-home-container`}>
         <Slider movie = {seriegenresfilter} title={seriegenrestile} />
         </div>
-        <div className={flag? `show` :`hide`}>
+        <div className={flag? `show-home-container` :`hide-home-container`}>
             <Slider movie = {serieList2} title="Popular" />
             <Slider movie = {serieList4} title="Romance Movies && Tv-shows" />
             <Slider movie = {serieList3} title="Movies" />

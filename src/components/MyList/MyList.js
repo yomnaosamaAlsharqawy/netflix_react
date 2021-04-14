@@ -1,6 +1,7 @@
 import {useState,useEffect} from 'react'
 import Slider from '../slider/slider'
 import Main from '../main/main.component'
+import Footer from '../footer/footer'
 import './MyList.css'
 
 function MyList(){
@@ -32,11 +33,11 @@ function MyList(){
         }, [])
     
         return (
-            <div>
+          <div className="mylist-body-container">
             <Main />
              <Slider movie = {serieList1} title="My List" />
              <Slider movie = {serieList2} title="TopTen movies" />
-
+             <Footer />
         </div>
     )
 }
