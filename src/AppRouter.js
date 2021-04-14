@@ -18,7 +18,10 @@ import AddProfile from "./pages/profile/AddProfilePage/AddProfile";
 import EditProfile from "./pages/profile/EditProfilePage/EditProfile";
 import ManageProfiles from "./pages/profile/ManageProfilesPage/ManageProfiles";
 import ProfileLogin from "./pages/profile/ProfileLoginPage/ProfileLogin";
-import Layout from "./pages/profile/Layout";
+
+
+// Player
+import Player from "./pages/player/Player";
 
 // Stripe
 
@@ -69,6 +72,9 @@ export default function AppRouter() {
         </Route>
 
         {/* Resources */}
+        <Route path="/player">
+          <Player />
+        </Route>
       </Switch>
     </Router>
   );
