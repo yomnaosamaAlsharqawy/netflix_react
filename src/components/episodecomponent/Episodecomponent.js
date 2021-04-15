@@ -22,7 +22,7 @@ function Episodecomponent(props) {
               {/* <div className="h3 mr-4">{props.data.findIndex()}</div> */}
               <div className="btn-img-wrapper w-25">
                 <img src={record.image} className="w-100" />
-                <i className="far fa-play-circle"></i>
+                {/* <i className="far fa-play-circle"></i> */}
               </div>
               <div className="w-100 ml-2">
                 <div className="d-flex w-100 justify-content-between p-0">

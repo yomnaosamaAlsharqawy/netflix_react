@@ -54,7 +54,7 @@ function SeasonSection(props) {
           key="secondary"
           id={`dropdown-variants-secondary`}
           variant='secondary'
-          title="Season 1"
+          title="select Season"
         >
             {props.seasons.seasons.map((record) => 
             <Dropdown.Item eventKey="1"  onClick={() => setQuery(record)}>Season {record.season}</Dropdown.Item>)  
