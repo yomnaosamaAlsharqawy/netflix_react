@@ -107,8 +107,8 @@ function Home(){
                         <p>In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society.</p>
                     </div>
                     <div className="heroButtonContainer">
-                       <Link to="/video" className="play"><div className='heroButton1'> <FontAwesomeIcon icon={faPlay} /> &nbsp; Play</div></Link>
-                       <Link to="/video" className="moreInfo play" > <div className='heroButton2'> <FontAwesomeIcon icon={faInfoCircle}/> &nbsp; More Info</div></Link>
+                       <Link to="/video" className="play"><div className='heroButton1' onClick={()=>{localStorage.setItem("id", 11);localStorage.setItem("type", "movie")}}> <FontAwesomeIcon icon={faPlay} /> &nbsp; Play</div></Link>
+                       <Link to="/moreinfo" className="moreInfo play" > <div className='heroButton2' onClick={()=>{localStorage.setItem("id", 11);localStorage.setItem("type", "movie")}} > <FontAwesomeIcon icon={faInfoCircle}/> &nbsp; More Info</div></Link>
                     </div>
                 </div>
             </div>

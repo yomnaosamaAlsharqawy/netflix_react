@@ -4,6 +4,7 @@
     position:relative; 
     width: 250px;
     overflow: hidden;
+    transition: transform 0.15s ease-in-out;
 }
 
     .poster-container:hover

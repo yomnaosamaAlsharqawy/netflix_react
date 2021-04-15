@@ -17,6 +17,7 @@
     font-weight: bold;
     font-size: 30px;
     color: white;
+    text-transform: capitalize;
 }
 
 .c {
@@ -64,13 +65,6 @@
     font-size: 20px;
 }
 
-#forward:hover{
-    background-color: lightslategray;
-}
-#back:hover{
-    background-color: lightslategray;
-
-}
 
 .show-button{
 

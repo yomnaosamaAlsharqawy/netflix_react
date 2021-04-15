@@ -15,6 +15,18 @@ function LoginForm() {
   const [passwordProps, resetPassword] = useInput("");
   const History = useHistory()
 
+  const getAccountObject = async (e) => {
+    e.preventDefault();
+    const [data, status] = await accountApi.getStarted({
+      username: emailProps.value,
+    });
+  
+    const accountDetails = await accountApi.accountDetails(data.id);
+    localStorage.setItem("account", JSON.stringify(accountDetails));
+
+    History.push('/profiles/view');
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = await accountApi.login({
@@ -23,10 +35,10 @@ function LoginForm() {
     });
     if (data.token) {
       localStorage.setItem("token", data.token);
-      History.push('/profiles/view');
     } else {
       setEmailError("Email or Password is not correct!");
     }
+    getAccountObject(e);
   };
 
   return (
