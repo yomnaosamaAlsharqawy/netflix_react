@@ -11,7 +11,8 @@ export default function Player() {
   const [play, setPlay] = useState(true);
   const [speed, setSpeed] = useState(1);
   const [currentTime, setCurrentTime] = useState(0);
-
+  const [seekbarUpperWidth, setSeekbarUpperWidth] = useState('0px');
+  const [seekbarThumbLeft, setSeekbarThumbLeft] = useState('0px')
   const [speedDisplay, setSpeedDisplay] = useState('none');
   const [volumeDisplay, setVolumeDisplay] = useState('none');
   
@@ -20,6 +21,8 @@ export default function Player() {
   const video = useRef();
   const seekbar = useRef();
   const volIcon = useRef();
+  const seekbarUpper = document.querySelector("#seekbarUpper");
+  const seekbarThumb = document.querySelector("#seekbarThumb");
 
   const id = localStorage.getItem("id")
   const episode_id = localStorage.getItem("episode_id")
@@ -168,28 +171,28 @@ export default function Player() {
     return false;
   }
 
-  function handleSeekbarClick(e) {
-    const whereToPercent = e.offsetX / seekbar.clientWidth;
-    video.current.currentTime = video.current.duration * whereToPercent;
+  function handleSeekbarClick(e, offset) {
+    const whereToPercent = offset / seekbar.current.clientWidth;
+    setCurrentTime(video.current.duration * whereToPercent);
+    video.current.currentTime = video.current.duration * whereToPercent
   }
 
   function handleTimeupdate() {
     // const subtitles = document.querySelector('#subtitles');
     // const seekbar = document.querySelector("#seekbar");
-    const seekbarUpper = document.querySelector("#seekbarUpper");
-    const seekbarThumb = document.querySelector("#seekbarThumb");
     const seekbarRemainingTime = document.querySelector(
       "#seekbarRemainingTime"
     );
 
-    localStorage[`video${data.url.id}`] = video.current.currentTime;
+    localStorage[`video${data.id}`] = video.current.currentTime;
 
     // sync seekbar and thumb with current time
     const x =
-      (video.current.currentTime / video.current.duration) *
-      seekbar.clientWidth;
-    seekbarUpper.style.width = `${x}px`;
-    seekbarThumb.style.left = `${x}px`;
+      (video.current.currentTime / video.current.duration) * parseFloat(seekbar.current.clientWidth);
+      
+
+    setSeekbarUpperWidth(`${x}px`);
+    setSeekbarThumbLeft(`${x}px`);
 
     // time left
     let totalSeconds = video.current.duration - video.current.currentTime;
@@ -289,11 +292,11 @@ export default function Player() {
                       className="w-100"
                       id="seekbar"
                       ref={seekbar}
-                      onClick={handleSeekbarClick}
+                      onClick={(e) => handleSeekbarClick(e, e.nativeEvent.offsetX)}
                     >
-                      <div id="seekbarLower"></div>
-                      <div id="seekbarUpper"></div>
-                      <div id="seekbarThumb"></div>
+                      <div id="seekbarLower" ></div>
+                      <div id="seekbarUpper" style={{width: seekbarUpperWidth}}></div>
+                      <div id="seekbarThumb" style={{left: seekbarThumbLeft}}></div>
                     </div>
                     <div
                       id="seekbarTimeContainer"
