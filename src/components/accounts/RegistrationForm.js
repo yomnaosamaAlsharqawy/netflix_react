@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { useInput } from "../../hooks/useInput";
 import accountApi from "../../api/account";
-import { Form, Button, FormCheck } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 
 function RegistrationForm() {
-  const History = useHistory()
-  const account = JSON.parse(localStorage.getItem('account'));
-  const [emailProps,] = useInput(account.username);
+  const History = useHistory();
+  const account = JSON.parse(localStorage.getItem("account"));
+  const [emailProps] = useInput(account.username);
   const [emailError, setEmailError] = useState(null);
-  const [passwordProps,] = useInput("");
+  const [passwordProps] = useInput("");
   const [passwordError, setPasswordError] = useState(null);
 
   const handleSubmit = async (e) => {
@@ -21,18 +21,25 @@ function RegistrationForm() {
     });
 
     if (status === 400 && data.username) {
-      setEmailError(data.username)
+      setEmailError(data.username);
     }
 
     if (status === 400 && data.password) {
-      setPasswordError(data.password)
+      setPasswordError(data.password);
     }
 
     if (status === 201) {
-      console.log('created')       // <-- handle router
-      console.log(data);
+      console.log("created"); // <-- handle router
       await localStorage.setItem("account", JSON.stringify(data));
-      History.push("/signup")
+
+      const t = await accountApi.login({
+        username: emailProps.value,
+        password: passwordProps.value,
+      });
+      if (t.token) {
+        localStorage.setItem("token", t.token);
+      }
+      History.push("/signup");
     }
   };
 

@@ -3,11 +3,12 @@ import "./Player.css";
 import $ from "jquery";
 import Popper from "popper.js";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import {useHistory } from 'react-router-dom';
 
 export default function Player() {
-
+  const History = useHistory();
   const [data, setData] = useState([]);
-  const [play, setPlay] = useState(false);
+  const [play, setPlay] = useState(true);
   const [speed, setSpeed] = useState(1);
   const [currentTime, setCurrentTime] = useState(0);
 
@@ -21,6 +22,7 @@ export default function Player() {
   const volIcon = useRef();
 
   const id = localStorage.getItem("id")
+  const episode_id = localStorage.getItem("episode_id")
   const type = localStorage.getItem("type")
 
   const storedToken = localStorage.getItem("token")
@@ -37,10 +39,17 @@ export default function Player() {
     };
 
     // Do the fetch
+    if (type === 'movie') {
     fetch(`http://localhost:8000/resources/moreinfo?id=${id}&type=${type}`, requestOptions)
       .then((res) => res.json())
       .then(setData)
       .catch(console.log);
+    } else if (type === 'tv_show') {
+      fetch(`http://localhost:8000/resources/oneepisode?episode=${episode_id}`, requestOptions)
+      .then((res) => res.json())
+      .then(setData)
+      .catch(console.log);
+    }
 
     setVolume(5);
 
@@ -220,6 +229,7 @@ export default function Player() {
           <div className="player" id="player">
             {/* <!-- HTML5 Video player without any controls --> */}
             <video
+              autoPlay
               ref={video}
               id="video"
               onTimeUpdate={handleTimeupdate}
@@ -240,6 +250,7 @@ export default function Player() {
                   id="backBtnContainer"
                 >
                   <button
+                    onClick={() => History.goBack()}
                     className="ctrl-btn topctrl-btn"
                     id="backBtn"
                     data-f="doNothing"

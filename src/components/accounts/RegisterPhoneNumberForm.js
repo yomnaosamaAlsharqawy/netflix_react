@@ -59,10 +59,6 @@ function RegistrationForm() {
         to your payment method until you cancel. You may cancel at any time to
         avoid future charges.
       </div>
-     
-      <Form.Group controlId="formCheckbox">
-        <Form.Check type="checkbox" label="I Agree" />
-      </Form.Group>
       
       <Button
         className="w-100"

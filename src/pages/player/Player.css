@@ -179,7 +179,7 @@
 }
 
 #backBtnContainer:hover h3.hover-text:after {
-    content: 'Back to Browse';
+    content: 'Go Back';
 }
 
 .ctrl-btn img {

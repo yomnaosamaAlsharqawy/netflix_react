@@ -1,8 +1,9 @@
 import { Navbar, Nav } from "react-bootstrap";
 import "./Layout.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export default function Layout({children}) {
+  const History = useHistory();
   return (
     <div className="bg-white" style={{minHeight: "100vh"}}>
       <div className="d-flex flex-column"  style={{ fontSize: "1.3em", minHeight: "100vh" }}>
@@ -20,11 +21,15 @@ export default function Layout({children}) {
           
           <Nav className="ml-auto">
             <Nav.Link
-              href="#"
+
+              onClick={()=> {
+                localStorage.clear()
+                History.push("/")
+              }}
               className="text-dark font-weight-bold"
               style={{ fontSize: "1.3em" }}
             >
-              Sign Out
+              <span className="text-dark">Sign Out</span>
             </Nav.Link>
           </Nav>
         </Navbar>
