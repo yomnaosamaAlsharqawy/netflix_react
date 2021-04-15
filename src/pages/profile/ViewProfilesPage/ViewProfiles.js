@@ -1,9 +1,11 @@
 import "./ViewProfiles.css";
 import ProfileList from "../../../components/profiles/ProfileList";
 import { useHistory } from "react-router-dom";
+import { useEffect } from 'react';
 
 function ViewProfiles() {
   const History = useHistory();
+
   return (
     <div className="view-profiles-body">
       <div className="view-profiles-container">

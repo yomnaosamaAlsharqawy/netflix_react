@@ -34,7 +34,6 @@ function ProfileList(props) {
       else {
         console.log("Unknown error")
       }
-      
 
       // handle routing
       History.push(`/profiles/edit`);

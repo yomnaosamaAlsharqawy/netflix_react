@@ -25,6 +25,7 @@ function LoginForm() {
     localStorage.setItem("account", JSON.stringify(accountDetails));
 
     History.push('/profiles/view');
+    window.location.reload()
   }
 
   const handleSubmit = async (e) => {
